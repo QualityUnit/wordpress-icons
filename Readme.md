@@ -9,8 +9,8 @@ This repository **SHOULD NOT** be used to store complex illustrations, only icon
 ### Layout
 
 - common – icons that will be/are used on multiple projects (ie. mail icon)
-- la – icons used in LiveAgent ONLY
-- pap – icons used in PostAffiliate Pro ONLY
+- liveagent – icons used in LiveAgent ONLY
+- postaffiliatepro – icons used in PostAffiliate Pro ONLY
 
 ### Designers – icons preparation and upload
 
