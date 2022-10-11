@@ -4,7 +4,7 @@ This repository is used as a source and central storage for icons used by LiveAg
 
 All icons are saved in SVG format, preferably with outline paths (not strokes). Build file in a given project (ie. liveagent theme) will download them from this repository and build an SVG Sprite to be used in a project.
 
-This repository *SHOULD NOT* be used to store complex illustrations, only icons which are going to be reused multiple times.
+This repository **SHOULD NOT** be used to store complex illustrations, only icons which are going to be reused multiple times.
 
 ### Layout
 
