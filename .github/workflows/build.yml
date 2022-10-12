@@ -26,10 +26,3 @@ jobs:
 
       - name: Run tests
         run: yarn build
-
-      - name: Archive Build
-        uses: actions/upload-artifact@v3
-        with:
-          name: Save build files
-          path: |
-            build
