@@ -63,14 +63,14 @@ const PAPConfig = {
 
 gulp.task( 'laIcons', () =>
 	gulp
-		.src( [ './common/**/*.svg', './liveagent/**/*.svg' ] )
+		.src( [ './icons/common/**/*.svg', './icons/liveagent/**/*.svg' ] )
 		.pipe( svgSprites( LAConfig ) )
 		.pipe( gulp.dest( './build' ) )
 );
 
 gulp.task( 'papIcons', () =>
 	gulp
-		.src( [ './common/**/*.svg', './postaffiliatepro/**/*.svg' ] )
+		.src( [ './icons/common/**/*.svg', './icons/postaffiliatepro/**/*.svg' ] )
 		.pipe( svgSprites( PAPConfig ) )
 		.pipe( gulp.dest( './build' ) )
 );
