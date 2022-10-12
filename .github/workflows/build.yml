@@ -30,7 +30,6 @@ jobs:
       - name: Archive Build
         uses: actions/upload-artifact@v3
         with:
-          name: build files
+          name: Save build files
           path: |
-            la-icons-reference.html
-            pap-icons-reference.html
+            build

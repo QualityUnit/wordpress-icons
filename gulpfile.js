@@ -30,7 +30,7 @@ const LAConfig = {
 			rootviewbox: false,
 			example: {
 				template: './tmpl/symbol/template-la.html',
-				dest: '../la-icons-reference.html',
+				dest: 'la-icons-reference.html',
 			},
 		},
 	},
@@ -55,7 +55,7 @@ const PAPConfig = {
 			rootviewbox: false,
 			example: {
 				template: './tmpl/symbol/template-pap.html',
-				dest: '../pap-icons-reference.html',
+				dest: 'pap-icons-reference.html',
 			},
 		},
 	},
