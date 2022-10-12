@@ -16,5 +16,5 @@ This repository **SHOULD NOT** be used to store complex illustrations, only icon
 
 - prepare icon in your favourite designer tool
 - save icons as SVG, converted to outlines (not strokes)
-- go to directory here where you want to upload your svg icon
+- go to **icons** directory and then to directory where you want to upload your svg icon
 - click **Add File** button at the top and upload your svg icon
