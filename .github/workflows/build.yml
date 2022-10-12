@@ -26,3 +26,11 @@ jobs:
 
       - name: Run tests
         run: yarn build
+
+      - name: Archive Build
+        uses: actions/upload-artifact@v3
+        with:
+          name: build files
+          path: |
+            la-icons-reference.html
+            pap-icons-reference.html
