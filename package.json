@@ -1,0 +1,20 @@
+{
+	"name": "wordpress-icons",
+	"version": "1.0.0",
+	"description": "Icons for wordpress installations LiveAgent and PostAffiliatePro, output is SVG sprite",
+	"author": "Jozef Remen, QualityUnit",
+	"license": "GPL-2.0-only",
+	"scripts": {
+		"build": "gulp build",
+		"dev": "gulp"
+	},
+	"engines": {
+		"node": ">= 14"
+	},
+	"devDependencies": {
+		"del": "^6",
+		"gulp": "^4",
+		"gulp-svg-sprite": "^2.0"
+	},
+	"dependencies": {}
+}

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>SVG &lt;symbol&gt; sprite preview | svg-sprite</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                color: #666;
+                background: #fafafa;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            header {
+                display: block;
+                padding: 3em 3em 2em;
+                background-color: #fff;
+            }
+
+            header p {
+                margin: 2em 0 0;
+            }
+
+            section {
+                border-top: 1px solid #eee;
+                padding: 2em 3em 0;
+            }
+
+            section ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            section li {
+                display: inline-block;
+                background-color: #fff;
+                position: relative;
+                margin: 0 2em 2em 0;
+                vertical-align: top;
+                border: 1px solid #ccc;
+                padding: 1em 1em 3em;
+                cursor: default;
+            }
+
+            .icon-box {
+                margin: 0;
+                width: 144px;
+                height: 144px;
+                position: relative;
+                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+                border: 1px solid #ccc;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+
+            .icon {
+                display: inline-block;
+            }
+
+            h1 {
+                margin-top: 0;
+            }
+
+            li h4 {
+                margin: 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: 400;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                position: absolute;
+                left: 1em;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            code {
+                color: rgb(218, 45, 88);
+            }
+
+            code em {
+                font-style: normal;
+                color: rgb(36, 155, 58);
+            }
+
+            code span {
+                color: #050505;
+            }
+
+            footer {
+                display: block;
+                margin: 0;
+                padding: 0 3em 3em;
+            }
+
+            footer p {
+                margin: 0;
+                font-size: .7em;
+            }
+
+            footer a {
+                color: #0f7595;
+                margin-left: 0;
+            }
+        </style>
+
+<!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+<style>
+{{#shapes}} {{#selector.dimensions}}{{expression}}{{^last}}, {{/last}}{{/selector.dimensions}} { width: {{width.outer}}px; height: {{height.outer}}px; }
+{{/shapes}}</style>
+
+<!--
+====================================================================================================
+-->
+
+    </head>
+    <body>
+
+<!--
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+    https://github.com/svg-sprite/svg-sprite/blob/main/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+-->
+
+<svg width="0" height="0" style="position:absolute">
+{{#shapes}}     {{{svg}}}
+{{/shapes}}
+</svg>
+
+<!--
+====================================================================================================
+-->
+
+        <header>
+            <h1>LiveAgent icon reference</h1>
+            <p>This preview shows icons from generated sprite in conjunction with external SVG.</p>
+
+            <h2>How to show icon in the content</h2>
+            <p>
+                You can show icon either via class or directly calling icon sprite in PHP code.
+            </p>
+
+            <h3>Class method</h3>
+            <p>
+                Add class <code>icn-ICON_NAME</code> to the element where you want to show the icon. It will be placed INSIDE that element as a <strong>first child</strong>, similar to <code>:before</code> in CSS.
+            </p>
+            <p>
+                <strong>Usage:</strong>
+<pre>
+    <code>
+        &lt;div class=&quot;icn-search&quot;&gt;
+            <span>&mldr; other elements</span>
+        &lt;/div&gt;
+    </code>
+</pre>
+            </p>
+            <p>
+                <strong>Result:</strong>
+<pre>
+    <code>
+        &lt;div class=&quot;icn-search&quot;&gt;
+            <em>&lt;svg class=&quot;icon icon-search&quot;&gt;
+                &lt;use xlink:href=&quot;PATH_TO/icons.svg#search&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+            </em>
+            <span>&mldr; other elements</span>
+        &lt;/div&gt;
+    </code>
+</pre>
+            </p>
+            <p>Or add class <code>icn-after-ICON_NAME</code> to element where you want to show the icon. It will be placed INSIDE that element as a <strong>last child</strong>, similar to <code>:after</code> in CSS. </p>
+
+            <p>
+                <strong>Usage:</strong>
+<pre>
+    <code>
+        &lt;div class=&quot;icn-after-search&quot;&gt;
+            <span>&mldr; other elements</span>
+        &lt;/div&gt;
+    </code>
+</pre>
+            </p>
+            <p>
+                <strong>Result:</strong>
+<pre>
+    <code>
+        &lt;div class=&quot;icn-after-search&quot;&gt;
+            <span>&mldr; other elements</span>
+            <em>
+            &lt;svg class=&quot;icon icon-search&quot;&gt;
+                &lt;use xlink:href=&quot;PATH_TO/icons.svg#search&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+            </em>
+        &lt;/div&gt;
+    </code>
+</pre>
+            </p>
+            
+            <h3>PHP Snippet to use to include icon</h3>
+            <p>
+<pre>
+    <code>
+        &lt;svg class=&quot;icon icon-ICON_NAME&quot;&gt;
+            &lt;use xlink:href=&quot;get_template_directory_uri() . '/assets/images/icons.svg#ICON_NAME&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+    </code>
+</pre>
+            </p>
+        </header>
+        <section>
+
+<!--
+A) Inline SVG with external sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+-->
+
+            <h2>SVG Icons reference</h2>
+            <ul>
+
+{{#shapes}}             <li title="{{name}}">
+                    <div class="icon-box">
+                        <svg class="{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}">
+                            <use xlink:href="#{{name}}"></use>
+                        </svg>
+                    </div>
+                    <h4>{{name}}</h4>
+                </li>
+{{/shapes}}         </ul>
+
+<!--
+====================================================================================================
+-->
+
+        </section>
+        <footer>
+            <p>Generated at {{date}} by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+        </footer>
+    </body>
+</html>
