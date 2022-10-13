@@ -5,7 +5,7 @@ const svgSprites = require( 'gulp-svg-sprite' );
 gulp.task( 'clean-build', () =>
 	clean(
 		[
-			'./build/**/*',
+			'./docs/reference/*',
 		],
 		{ force: true }
 	)
@@ -23,14 +23,14 @@ const LAConfig = {
 	mode: {
 		symbol: {
 			dest: '.',
-			sprite: 'la-icons.svg',
+			sprite: 'reference/la-icons.svg',
 			prefix: '%s',
 			dimensions: '',
 			inline: false,
 			rootviewbox: false,
 			example: {
 				template: './tmpl/symbol/template-la.html',
-				dest: '../la-icons-reference.html',
+				dest: 'reference/la-icons-reference.html',
 			},
 		},
 	},
@@ -48,14 +48,14 @@ const PAPConfig = {
 	mode: {
 		symbol: {
 			dest: '.',
-			sprite: 'pap-icons.svg',
+			sprite: 'reference/pap-icons.svg',
 			prefix: '%s',
 			dimensions: '',
 			inline: false,
 			rootviewbox: false,
 			example: {
 				template: './tmpl/symbol/template-pap.html',
-				dest: '../pap-icons-reference.html',
+				dest: 'reference/pap-icons-reference.html',
 			},
 		},
 	},
@@ -65,14 +65,14 @@ gulp.task( 'laIcons', () =>
 	gulp
 		.src( [ './icons/common/**/*.svg', './icons/liveagent/**/*.svg' ] )
 		.pipe( svgSprites( LAConfig ) )
-		.pipe( gulp.dest( './build' ) )
+		.pipe( gulp.dest( './docs' ) )
 );
 
 gulp.task( 'papIcons', () =>
 	gulp
 		.src( [ './icons/common/**/*.svg', './icons/postaffiliatepro/**/*.svg' ] )
 		.pipe( svgSprites( PAPConfig ) )
-		.pipe( gulp.dest( './build' ) )
+		.pipe( gulp.dest( './docs' ) )
 );
 
 
