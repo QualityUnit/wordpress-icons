@@ -22,3 +22,5 @@ https://qualityunit.github.io/wordpress-icons/
 - save icons as SVG, converted to outlines (not strokes)
 - go to **icons** directory and then to directory where you want to upload your svg icon
 - click **Add File** button at the top and upload your svg icon
+- wait for file(s) to upload, it takes a while
+- click **Commit changes** button
