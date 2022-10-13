@@ -7,32 +7,9 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    strategy:
-      matrix:
-        node_version: [ '16' ]
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node_version }}
-
-      - name: Install Yarn dependencies
-        run: yarn
-
-      - name: Run tests
-        run: yarn build
-
    # Deploy job
   deploy:
     # Add a dependency to the build job
-    needs: build
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
@@ -48,6 +25,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+     
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: [ '16' ]
+
+      - name: Install Yarn dependencies
+        run: yarn
+
+      - name: Run tests
+        run: yarn build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
