@@ -6,6 +6,10 @@ All icons are saved in SVG format, preferably with outline paths (not strokes). 
 
 This repository **SHOULD NOT** be used to store complex illustrations, only icons which are going to be reused multiple times.
 
+## Icons reference
+Reference names with icon previews can be found on:
+https://qualityunit.github.io/wordpress-icons/
+
 ### Layout
 
 - common – icons that will be/are used on multiple projects (ie. mail icon)
