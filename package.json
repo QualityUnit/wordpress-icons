@@ -17,6 +17,6 @@
 		"gulp-svg-sprite": "^2.0"
 	},
 	"dependencies": {
-		"gulp-debug": "^4.0.0"
+		"gulp-rename": "^2.0.0"
 	}
 }

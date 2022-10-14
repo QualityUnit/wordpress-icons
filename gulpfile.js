@@ -1,7 +1,7 @@
 const clean = require( 'del' );
 const gulp = require( 'gulp' );
 const svgSprites = require( 'gulp-svg-sprite' );
-const debug = require( 'gulp-debug' );
+const rename = require( 'gulp-rename' );
 
 gulp.task( 'clean-build', () =>
 	clean(
@@ -12,7 +12,7 @@ gulp.task( 'clean-build', () =>
 	)
 );
 
-const LAConfig = {
+let LAConfig = {
 	shape: {
 		id: {
 			generator: '%s',
@@ -62,18 +62,46 @@ const PAPConfig = {
 	},
 };
 
-gulp.task( 'laIcons', () =>
-	gulp
-		.src( [ './icons/common/**/*.svg', './icons/liveagent/**/*.svg' ] )
-		// .pipe(debug())
+gulp.task( 'laIcons', () => 
+
+	gulp.src([ './icons/common/**/*.svg', './icons/liveagent/**/*.svg' ], { base: './' })
+		.pipe( rename( (file) => {
+			let myprefix = file.dirname;
+			myprefix = myprefix.replace(/.+?\/([^\\/]+)$/g,'$1');
+
+			if ( myprefix !== ('common' || 'liveagent' ) ) {
+				myprefix = `${myprefix}-`
+			} else {
+				myprefix = '';
+			}
+			return {
+				dirname: file.dirname,
+				basename: `${myprefix}${file.basename}`,
+				extname: '.svg'
+			};
+		}))
 		.pipe( svgSprites( LAConfig ) )
 		.pipe( gulp.dest( './docs' ) )
 );
 
-
 gulp.task( 'papIcons', () =>
 	gulp
 		.src( [ './icons/common/**/*.svg', './icons/postaffiliatepro/**/*.svg' ] )
+		.pipe( rename( (file) => {
+			let myprefix = file.dirname;
+			myprefix = myprefix.replace(/.+?\/([^\\/]+)$/g,'$1');
+
+			if ( myprefix !== ('common' || 'postaffiliatepro' ) ) {
+				myprefix = `${myprefix}-`
+			} else {
+				myprefix = '';
+			}
+			return {
+				dirname: file.dirname,
+				basename: `${myprefix}${file.basename}`,
+				extname: '.svg'
+			};
+		}))
 		.pipe( svgSprites( PAPConfig ) )
 		.pipe( gulp.dest( './docs' ) )
 );
