@@ -1,6 +1,7 @@
 const clean = require( 'del' );
 const gulp = require( 'gulp' );
 const svgSprites = require( 'gulp-svg-sprite' );
+const debug = require( 'gulp-debug' );
 
 gulp.task( 'clean-build', () =>
 	clean(
@@ -64,9 +65,11 @@ const PAPConfig = {
 gulp.task( 'laIcons', () =>
 	gulp
 		.src( [ './icons/common/**/*.svg', './icons/liveagent/**/*.svg' ] )
+		// .pipe(debug())
 		.pipe( svgSprites( LAConfig ) )
 		.pipe( gulp.dest( './docs' ) )
 );
+
 
 gulp.task( 'papIcons', () =>
 	gulp
