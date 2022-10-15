@@ -69,7 +69,7 @@ gulp.task( 'laIcons', () =>
 			let myprefix = file.dirname;
 			myprefix = myprefix.replace(/.+?\/([^\\/]+)$/g,'$1');
 
-			if ( myprefix !== ('common' || 'liveagent' ) ) {
+			if ( myprefix !== 'common' && myprefix !== 'liveagent' ) {
 				myprefix = `${myprefix}-`
 			} else {
 				myprefix = '';
@@ -91,7 +91,7 @@ gulp.task( 'papIcons', () =>
 			let myprefix = file.dirname;
 			myprefix = myprefix.replace(/.+?\/([^\\/]+)$/g,'$1');
 
-			if ( myprefix !== ('common' || 'postaffiliatepro' ) ) {
+			if ( myprefix !== 'common' && myprefix !== 'postaffiliatepro' ) {
 				myprefix = `${myprefix}-`
 			} else {
 				myprefix = '';
