@@ -1,0 +1,104 @@
+.hidden {
+	display: none !important;
+}
+ 
+ body {
+		padding: 0;
+		margin: 0;
+		color: #666;
+		background: #fafafa;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 1em;
+		line-height: 1.4;
+}
+
+header {
+		display: block;
+		padding: 3em 3em 2em;
+		background-color: #fff;
+}
+
+header p {
+		margin: 2em 0 0;
+}
+
+section {
+		border-top: 1px solid #eee;
+		padding: 2em 3em 0;
+}
+
+.IconsList {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+		grid-gap: 1em;
+		margin: 0 0 3em;
+		padding: 0;
+}
+
+.IconsList__title {
+	grid-column: 1/-1;
+	display: block;
+	margin-bottom: 1em;
+}
+
+.IconsList .IconsList__item {
+		display: block;
+		background-color: #fff;
+		position: relative;
+		border: 1px solid #ccc;
+		padding: 1em;
+		cursor: default;
+}
+
+.IconsList__item h4 {
+		margin: 1em 0 0 0;
+		padding: 0;
+		font-size: 1em;
+		font-weight: 400;
+}
+
+.icon-box {
+		margin: 0;
+		position: relative;
+		background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
+		border: 1px solid #ccc;
+		text-align: center;
+}
+
+.icon {
+		display: inline-block;
+}
+
+h1 {
+		margin-top: 0;
+}
+
+code {
+		color: rgb(218, 45, 88);
+		font-size: 0.875rem;
+}
+
+code em {
+		font-style: normal;
+		color: rgb(36, 155, 58);
+}
+
+code span {
+		color: #050505;
+}
+
+footer {
+		display: block;
+		margin: 0;
+		padding: 0 3em 3em;
+}
+
+footer p {
+		margin: 0;
+		font-size: .7em;
+}
+
+footer a {
+		color: #0f7595;
+		margin-left: 0;
+}

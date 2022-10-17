@@ -3,111 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>PostAffiliate Pro icon reference</title>
-        <style>
-            body {
-                padding: 0;
-                margin: 0;
-                color: #666;
-                background: #fafafa;
-                font-family: Arial, Helvetica, sans-serif;
-                font-size: 1em;
-                line-height: 1.4;
-            }
-
-            header {
-                display: block;
-                padding: 3em 3em 2em;
-                background-color: #fff;
-            }
-
-            header p {
-                margin: 2em 0 0;
-            }
-
-            section {
-                border-top: 1px solid #eee;
-                padding: 2em 3em 0;
-            }
-
-            section ul {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-                grid-gap: 1em;
-                margin: 0;
-                padding: 0;
-            }
-
-            section li {
-                display: block;
-                background-color: #fff;
-                position: relative;
-                /* margin: 0 2em 2em 0; */
-                vertical-align: top;
-                border: 1px solid #ccc;
-                padding: 1em 1em 3em;
-                cursor: default;
-            }
-
-            .icon-box {
-                margin: 0;
-                position: relative;
-                background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
-                border: 1px solid #ccc;
-                text-align: center;
-            }
-
-            .icon {
-                display: inline-block;
-            }
-
-            h1 {
-                margin-top: 0;
-            }
-
-            li h4 {
-                margin: 0;
-                padding: 0;
-                font-size: 1em;
-                font-weight: 400;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                position: absolute;
-                left: 1em;
-                right: 1em;
-                bottom: 1em;
-            }
-
-            code {
-                color: rgb(218, 45, 88);
-                font-size: 0.875rem;
-            }
-
-            code em {
-                font-style: normal;
-                color: rgb(36, 155, 58);
-            }
-
-            code span {
-                color: #050505;
-            }
-
-            footer {
-                display: block;
-                margin: 0;
-                padding: 0 3em 3em;
-            }
-
-            footer p {
-                margin: 0;
-                font-size: .7em;
-            }
-
-            footer a {
-                color: #0f7595;
-                margin-left: 0;
-            }
-        </style>
+        <link rel="stylesheet" href="../style.css" />
 
 <!--
 Sprite shape dimensions
@@ -229,15 +125,40 @@ embedded above. They may be styled via CSS.
 -->
 
             <h2>SVG Icons reference</h2>
-            <ul>
+            <div class="Filter">
+                <div class="searchField">
+                    <svg class="searchField__icon">
+                        <use xlink:href="la-icons.svg#search"></use>
+                    </svg>
+                    <input type="search" class="search search--use-cases" placeholder="Search icon" maxlength="50">
+                </div>
 
-{{#shapes}}             <li title="{{name}}">
+                <div class="FilterMenu">
+                    <div class="FilterMenu__title flex flex-align-center">
+                        Select category
+                    </div>
+                    <div class="FilterMenu__items">
+                        <div class="FilterMenu__items--inn">
+                            <div class="checkbox FilterMenu__item" style="order: 2">
+                                <input class="filter-item" type="radio" id="cat-all" value="" name="category" checked />
+                                <label for="cat-all">
+                                    Any
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="IconsList">
+
+{{#shapes}}             <li title="{{name}}" class="IconsList__item" data-name="{{name}}">
                     <div class="icon-box">
                         <svg class="icon icon-{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}">
                             <use xlink:href="{{{example}}}#{{name}}"></use>
                         </svg>
                     </div>
-                    <h4>{{name}}</h4>
+                    <h4 class="IconsList__item--title">{{name}}</h4>
                 </li>
 {{/shapes}}         </ul>
 
@@ -249,5 +170,7 @@ embedded above. They may be styled via CSS.
         <footer>
             <p>Generated at {{date}} by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
         </footer>
+
+        <script src="../js/script.js"></script>
     </body>
 </html>

@@ -1,0 +1,152 @@
+/* stylelint-disable selector-class-pattern,
+no-descending-specificity, value-keyword-case
+*/
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+.Input {
+
+	@include color(border-color, border-color-inputs);
+	@include color(color, font-color-level3);
+	@include color(background-color, main-background);
+	width: auto;
+	height: $input-height-normal;
+	padding: 0 $input-padding-normal;
+	border-width: $input-border-width-normal;
+	border-style: solid;
+	border-radius: ($border-radius - 2);
+	font-size: $input-font-size-normal;
+	font-family: $font-primary;
+	font-weight: 400;
+
+	&:-ms-input-placeholder,
+	&::-ms-input-placeholder {
+
+		color: currentColor;
+		opacity: 1;
+	}
+
+	&::placeholder {
+
+		color: currentColor;
+		opacity: 1;
+	}
+
+	&:focus {
+
+		@include color(border-color, font-color-dark);
+		@include color(color, font-color-dark);
+	}
+}
+
+textarea {
+
+	@include color(border-color, border-color-inputs);
+	@include color(color, font-color-level3);
+	width: auto;
+	min-height: $input-height-normal;
+	padding: $input-padding-normal;
+	border-width: $input-border-width-normal;
+	border-style: solid;
+	border-radius: ($border-radius - 2);
+	background-color: transparent;
+	font-size: $input-font-size-normal;
+	font-weight: $font-weight-normal;
+
+	&::placeholder {
+
+		@include color(color, font-color-level3);
+		opacity: 1;
+	}
+}
+
+.checkbox {
+	color: $dark-gray;
+	font-size: 0.875rem;
+	margin-bottom: 0.75em;
+
+	input {
+		display: none;
+	}
+
+	label {
+		display: flex;
+		align-content: center;
+		width: 100%;
+		cursor: pointer;
+
+		&::before {
+			content: "";
+
+			@include square(1.429em);
+			background: url(../images/checkbox-inactive.svg) center center no-repeat;
+			background-size: contain;
+			margin-right: 0.75em;
+		}
+
+		@media (hover: hover) {
+
+			&:hover {
+
+				&::before {
+					background-image: url(../images/checkbox-hover.svg);
+				}
+			}
+		}
+	}
+
+	[type="checkbox"]:checked,
+	[type="radio"]:checked {
+
+		+ label {
+
+			&::before {
+				background-image: url(../images/checkbox-active.svg);
+			}
+		}
+	}
+}
+
+.sorting {
+	color: $dark-gray;
+	font-size: 0.875rem;
+	margin-bottom: 0.75em;
+
+	input {
+		display: none;
+	}
+
+	label {
+		display: flex;
+		align-items: center;
+		align-content: center;
+		width: 100%;
+		cursor: pointer;
+
+		&::before {
+			content: "";
+
+			@include square(0.85em);
+			background: url(../images/icon-sorting-check.svg) center center no-repeat;
+			background-size: contain;
+			margin-right: 0.75em;
+			opacity: 0;
+		}
+	}
+
+	[type="radio"]:checked {
+
+		+ label {
+
+			&::before {
+				opacity: 1;
+			}
+		}
+	}
+}
