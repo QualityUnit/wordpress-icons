@@ -22,7 +22,7 @@ gulp.task( 'browser-sync', () => {
 	});
 
 	gulp.watch( './src/scss/**/*.scss', gulp.series( 'styles' ) );
-	gulp.watch( './src/js/**/*.js', gulp.series( 'scripts' ) );
+	// gulp.watch( './src/js/**/*.js', gulp.series( 'scripts' ) );
 
 	gulp.watch(
 		['./icons/**/*.svg', './src/tmpl/**/*.html'],

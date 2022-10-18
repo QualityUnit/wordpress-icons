@@ -32,7 +32,7 @@
         }
     }
 
-    [id*=circle] {
+    .circle {
         transform-origin: 45% 48%;
     }
 
@@ -44,8 +44,8 @@
         animation: 4s circle2 linear infinite;
     }
 </style>
-<circle id="circle2" cx="24" cy="24" r="24" style="fill:url(#a);fill-opacity:0.2;"/>
-<circle id="circle1" cx="24" cy="24" r="20" style="fill:url(#b);fill-opacity:0.4;"/>
+<circle class="circle" id="circle2" cx="24" cy="24" r="24" style="fill:url(#a);fill-opacity:0.2;"/>
+<circle class="circle" id="circle1" cx="24" cy="24" r="20" style="fill:url(#b);fill-opacity:0.4;"/>
 <circle cx="24" cy="24" r="16" fill="url(#c)"/>
 <path fill="#fff" d="M29.5 23.134a1 1 0 0 1 0 1.732l-7.5 4.33a1 1 0 0 1-1.5-.866v-8.66a1 1 0 0 1 1.5-.866l7.5 4.33z"/>
 <defs>
