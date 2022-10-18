@@ -8,7 +8,7 @@ This repository **SHOULD NOT** be used to store complex illustrations, only icon
 
 ## Icons reference
 Reference names with icon previews can be found on:
-https://qualityunit.github.io/wordpress-icons/docs
+https://qualityunit.github.io/wordpress-icons
 
 ### Layout
 
