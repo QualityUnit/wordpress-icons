@@ -35,6 +35,9 @@ They might well be outsourced to an external stylesheet of course.
   chat { width: 43px; height: 43px; }
   check { width: 32px; height: 32px; }
   check-circle-regular { width: 32px; height: 32px; }
+  checkbox-checkbox-active { width: 16px; height: 16px; }
+  checkbox-checkbox-hover { width: 23px; height: 23px; }
+  checkbox-checkbox-inactive { width: 16px; height: 16px; }
   chevron-down { width: 28px; height: 32px; }
   chevron-left { width: 20px; height: 32px; }
   chevron-right { width: 20px; height: 32px; }
@@ -165,10 +168,16 @@ for further details on how to create this embeddable sprite variant.
             <h1>PostAffiliatePro icon reference</h1>
             <p>This preview shows icons from generated sprite in conjunction with external SVG.</p>
 
-            <h2>How to show icon in the content</h2>
+            <br /><br />
+            <label class="instructions-show" for="showInstructions">
+                <h2>How to insert icon in the content (click for details)</h2>
+            </label>
+            <input id="showInstructions" class="hidden" type="checkbox" />
+        <div class="instructions">
             <p>
                 You can show icon either via class or directly calling icon sprite in PHP code.
             </p>
+            <br /><br />
 
             <h3>Class method</h3>
             <p>
@@ -236,6 +245,7 @@ for further details on how to create this embeddable sprite variant.
     </code>
 </pre>
             </p>
+</div>
         </header>
         <section>
 
@@ -270,993 +280,2663 @@ embedded above. They may be styled via CSS.
                         </div>
                     </div>
                 </div>
+
+                <div class="iconSize">
+                    <input type="range" class="iconSize-range" data-target="icon" min="16" max="72" step="1" value="72" />
+                    <strong class="iconSize-size" data-id="iconSize">72px</strong>
+                </div>
+                <div class="iconColor">
+                    <input type="color" class="iconColor-range" data-target="icon" value="#000000" />
+                </div>
             </div>
 
             <ul class="IconsList">
 
              <li title="affiliate-network" class="IconsList__item" data-name="affiliate-network">
+                    <div class="Tooltip">.icn-affiliate-network<br />
+                        <strong>after: </strong>.icn-after-affiliate-network
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-affiliate-network&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#affiliate-network&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-affiliate-network">
+                        <svg class="icon icon-affiliate-network" data-id="icon">
                             <use xlink:href="pap-icons.svg#affiliate-network"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">affiliate-network</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-affiliate-network" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#affiliate-network"></use>
+                        </svg>
+                        affiliate-network
+                    </h4>
                 </li>
              <li title="affiliate-program" class="IconsList__item" data-name="affiliate-program">
+                    <div class="Tooltip">.icn-affiliate-program<br />
+                        <strong>after: </strong>.icn-after-affiliate-program
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-affiliate-program&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#affiliate-program&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-affiliate-program">
+                        <svg class="icon icon-affiliate-program" data-id="icon">
                             <use xlink:href="pap-icons.svg#affiliate-program"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">affiliate-program</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-affiliate-program" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#affiliate-program"></use>
+                        </svg>
+                        affiliate-program
+                    </h4>
                 </li>
              <li title="anchor" class="IconsList__item" data-name="anchor">
+                    <div class="Tooltip">.icn-anchor<br />
+                        <strong>after: </strong>.icn-after-anchor
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-anchor&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#anchor&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-anchor">
+                        <svg class="icon icon-anchor" data-id="icon">
                             <use xlink:href="pap-icons.svg#anchor"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">anchor</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-anchor" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#anchor"></use>
+                        </svg>
+                        anchor
+                    </h4>
                 </li>
              <li title="arrow-left" class="IconsList__item" data-name="arrow-left">
+                    <div class="Tooltip">.icn-arrow-left<br />
+                        <strong>after: </strong>.icn-after-arrow-left
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-arrow-left&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#arrow-left&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-arrow-left">
+                        <svg class="icon icon-arrow-left" data-id="icon">
                             <use xlink:href="pap-icons.svg#arrow-left"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">arrow-left</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-arrow-left" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#arrow-left"></use>
+                        </svg>
+                        arrow-left
+                    </h4>
                 </li>
              <li title="arrow-right" class="IconsList__item" data-name="arrow-right">
+                    <div class="Tooltip">.icn-arrow-right<br />
+                        <strong>after: </strong>.icn-after-arrow-right
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-arrow-right&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#arrow-right&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-arrow-right">
+                        <svg class="icon icon-arrow-right" data-id="icon">
                             <use xlink:href="pap-icons.svg#arrow-right"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">arrow-right</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-arrow-right" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#arrow-right"></use>
+                        </svg>
+                        arrow-right
+                    </h4>
                 </li>
              <li title="award" class="IconsList__item" data-name="award">
+                    <div class="Tooltip">.icn-award<br />
+                        <strong>after: </strong>.icn-after-award
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-award&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#award&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-award">
+                        <svg class="icon icon-award" data-id="icon">
                             <use xlink:href="pap-icons.svg#award"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">award</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-award" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#award"></use>
+                        </svg>
+                        award
+                    </h4>
                 </li>
              <li title="ball" class="IconsList__item" data-name="ball">
+                    <div class="Tooltip">.icn-ball<br />
+                        <strong>after: </strong>.icn-after-ball
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-ball&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#ball&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-ball">
+                        <svg class="icon icon-ball" data-id="icon">
                             <use xlink:href="pap-icons.svg#ball"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">ball</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-ball" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#ball"></use>
+                        </svg>
+                        ball
+                    </h4>
                 </li>
              <li title="bookmark" class="IconsList__item" data-name="bookmark">
+                    <div class="Tooltip">.icn-bookmark<br />
+                        <strong>after: </strong>.icn-after-bookmark
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-bookmark&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#bookmark&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-bookmark">
+                        <svg class="icon icon-bookmark" data-id="icon">
                             <use xlink:href="pap-icons.svg#bookmark"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">bookmark</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-bookmark" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#bookmark"></use>
+                        </svg>
+                        bookmark
+                    </h4>
                 </li>
              <li title="brand-github" class="IconsList__item" data-name="brand-github">
+                    <div class="Tooltip">.icn-brand-github<br />
+                        <strong>after: </strong>.icn-after-brand-github
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-brand-github&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#brand-github&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-brand-github">
+                        <svg class="icon icon-brand-github" data-id="icon">
                             <use xlink:href="pap-icons.svg#brand-github"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">brand-github</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-brand-github" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#brand-github"></use>
+                        </svg>
+                        brand-github
+                    </h4>
                 </li>
              <li title="brand-wordpress" class="IconsList__item" data-name="brand-wordpress">
+                    <div class="Tooltip">.icn-brand-wordpress<br />
+                        <strong>after: </strong>.icn-after-brand-wordpress
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-brand-wordpress&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#brand-wordpress&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-brand-wordpress">
+                        <svg class="icon icon-brand-wordpress" data-id="icon">
                             <use xlink:href="pap-icons.svg#brand-wordpress"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">brand-wordpress</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-brand-wordpress" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#brand-wordpress"></use>
+                        </svg>
+                        brand-wordpress
+                    </h4>
                 </li>
              <li title="briefcase" class="IconsList__item" data-name="briefcase">
+                    <div class="Tooltip">.icn-briefcase<br />
+                        <strong>after: </strong>.icn-after-briefcase
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-briefcase&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#briefcase&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-briefcase">
+                        <svg class="icon icon-briefcase" data-id="icon">
                             <use xlink:href="pap-icons.svg#briefcase"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">briefcase</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-briefcase" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#briefcase"></use>
+                        </svg>
+                        briefcase
+                    </h4>
                 </li>
              <li title="buildings" class="IconsList__item" data-name="buildings">
+                    <div class="Tooltip">.icn-buildings<br />
+                        <strong>after: </strong>.icn-after-buildings
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-buildings&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#buildings&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-buildings">
+                        <svg class="icon icon-buildings" data-id="icon">
                             <use xlink:href="pap-icons.svg#buildings"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">buildings</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-buildings" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#buildings"></use>
+                        </svg>
+                        buildings
+                    </h4>
                 </li>
              <li title="calendar" class="IconsList__item" data-name="calendar">
+                    <div class="Tooltip">.icn-calendar<br />
+                        <strong>after: </strong>.icn-after-calendar
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-calendar&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#calendar&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-calendar">
+                        <svg class="icon icon-calendar" data-id="icon">
                             <use xlink:href="pap-icons.svg#calendar"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">calendar</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-calendar" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#calendar"></use>
+                        </svg>
+                        calendar
+                    </h4>
                 </li>
              <li title="calendar-lines" class="IconsList__item" data-name="calendar-lines">
+                    <div class="Tooltip">.icn-calendar-lines<br />
+                        <strong>after: </strong>.icn-after-calendar-lines
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-calendar-lines&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#calendar-lines&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-calendar-lines">
+                        <svg class="icon icon-calendar-lines" data-id="icon">
                             <use xlink:href="pap-icons.svg#calendar-lines"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">calendar-lines</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-calendar-lines" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#calendar-lines"></use>
+                        </svg>
+                        calendar-lines
+                    </h4>
                 </li>
              <li title="change-log" class="IconsList__item" data-name="change-log">
+                    <div class="Tooltip">.icn-change-log<br />
+                        <strong>after: </strong>.icn-after-change-log
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-change-log&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#change-log&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-change-log">
+                        <svg class="icon icon-change-log" data-id="icon">
                             <use xlink:href="pap-icons.svg#change-log"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">change-log</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-change-log" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#change-log"></use>
+                        </svg>
+                        change-log
+                    </h4>
                 </li>
              <li title="chart-bar" class="IconsList__item" data-name="chart-bar">
+                    <div class="Tooltip">.icn-chart-bar<br />
+                        <strong>after: </strong>.icn-after-chart-bar
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-chart-bar&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#chart-bar&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-chart-bar">
+                        <svg class="icon icon-chart-bar" data-id="icon">
                             <use xlink:href="pap-icons.svg#chart-bar"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">chart-bar</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-chart-bar" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#chart-bar"></use>
+                        </svg>
+                        chart-bar
+                    </h4>
                 </li>
              <li title="chart-bar-alt" class="IconsList__item" data-name="chart-bar-alt">
+                    <div class="Tooltip">.icn-chart-bar-alt<br />
+                        <strong>after: </strong>.icn-after-chart-bar-alt
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-chart-bar-alt&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#chart-bar-alt&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-chart-bar-alt">
+                        <svg class="icon icon-chart-bar-alt" data-id="icon">
                             <use xlink:href="pap-icons.svg#chart-bar-alt"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">chart-bar-alt</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-chart-bar-alt" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#chart-bar-alt"></use>
+                        </svg>
+                        chart-bar-alt
+                    </h4>
                 </li>
              <li title="chart-points" class="IconsList__item" data-name="chart-points">
+                    <div class="Tooltip">.icn-chart-points<br />
+                        <strong>after: </strong>.icn-after-chart-points
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-chart-points&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#chart-points&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-chart-points">
+                        <svg class="icon icon-chart-points" data-id="icon">
                             <use xlink:href="pap-icons.svg#chart-points"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">chart-points</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-chart-points" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#chart-points"></use>
+                        </svg>
+                        chart-points
+                    </h4>
                 </li>
              <li title="chat" class="IconsList__item" data-name="chat">
+                    <div class="Tooltip">.icn-chat<br />
+                        <strong>after: </strong>.icn-after-chat
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-chat&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#chat&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-chat">
+                        <svg class="icon icon-chat" data-id="icon">
                             <use xlink:href="pap-icons.svg#chat"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">chat</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-chat" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#chat"></use>
+                        </svg>
+                        chat
+                    </h4>
                 </li>
              <li title="check" class="IconsList__item" data-name="check">
+                    <div class="Tooltip">.icn-check<br />
+                        <strong>after: </strong>.icn-after-check
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-check&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#check&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-check">
+                        <svg class="icon icon-check" data-id="icon">
                             <use xlink:href="pap-icons.svg#check"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">check</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-check" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#check"></use>
+                        </svg>
+                        check
+                    </h4>
                 </li>
              <li title="check-circle-regular" class="IconsList__item" data-name="check-circle-regular">
+                    <div class="Tooltip">.icn-check-circle-regular<br />
+                        <strong>after: </strong>.icn-after-check-circle-regular
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-check-circle-regular&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#check-circle-regular&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-check-circle-regular">
+                        <svg class="icon icon-check-circle-regular" data-id="icon">
                             <use xlink:href="pap-icons.svg#check-circle-regular"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">check-circle-regular</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-check-circle-regular" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#check-circle-regular"></use>
+                        </svg>
+                        check-circle-regular
+                    </h4>
+                </li>
+             <li title="checkbox-checkbox-active" class="IconsList__item" data-name="checkbox-checkbox-active">
+                    <div class="Tooltip">.icn-checkbox-checkbox-active<br />
+                        <strong>after: </strong>.icn-after-checkbox-checkbox-active
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-checkbox-checkbox-active&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#checkbox-checkbox-active&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
+                    <div class="icon-box">
+                        <svg class="icon icon-checkbox-checkbox-active" data-id="icon">
+                            <use xlink:href="pap-icons.svg#checkbox-checkbox-active"></use>
+                        </svg>
+                    </div>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-checkbox-checkbox-active" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#checkbox-checkbox-active"></use>
+                        </svg>
+                        checkbox-checkbox-active
+                    </h4>
+                </li>
+             <li title="checkbox-checkbox-hover" class="IconsList__item" data-name="checkbox-checkbox-hover">
+                    <div class="Tooltip">.icn-checkbox-checkbox-hover<br />
+                        <strong>after: </strong>.icn-after-checkbox-checkbox-hover
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-checkbox-checkbox-hover&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#checkbox-checkbox-hover&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
+                    <div class="icon-box">
+                        <svg class="icon icon-checkbox-checkbox-hover" data-id="icon">
+                            <use xlink:href="pap-icons.svg#checkbox-checkbox-hover"></use>
+                        </svg>
+                    </div>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-checkbox-checkbox-hover" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#checkbox-checkbox-hover"></use>
+                        </svg>
+                        checkbox-checkbox-hover
+                    </h4>
+                </li>
+             <li title="checkbox-checkbox-inactive" class="IconsList__item" data-name="checkbox-checkbox-inactive">
+                    <div class="Tooltip">.icn-checkbox-checkbox-inactive<br />
+                        <strong>after: </strong>.icn-after-checkbox-checkbox-inactive
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-checkbox-checkbox-inactive&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#checkbox-checkbox-inactive&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
+                    <div class="icon-box">
+                        <svg class="icon icon-checkbox-checkbox-inactive" data-id="icon">
+                            <use xlink:href="pap-icons.svg#checkbox-checkbox-inactive"></use>
+                        </svg>
+                    </div>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-checkbox-checkbox-inactive" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#checkbox-checkbox-inactive"></use>
+                        </svg>
+                        checkbox-checkbox-inactive
+                    </h4>
                 </li>
              <li title="chevron-down" class="IconsList__item" data-name="chevron-down">
+                    <div class="Tooltip">.icn-chevron-down<br />
+                        <strong>after: </strong>.icn-after-chevron-down
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-chevron-down&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#chevron-down&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-chevron-down">
+                        <svg class="icon icon-chevron-down" data-id="icon">
                             <use xlink:href="pap-icons.svg#chevron-down"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">chevron-down</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-chevron-down" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#chevron-down"></use>
+                        </svg>
+                        chevron-down
+                    </h4>
                 </li>
              <li title="chevron-left" class="IconsList__item" data-name="chevron-left">
+                    <div class="Tooltip">.icn-chevron-left<br />
+                        <strong>after: </strong>.icn-after-chevron-left
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-chevron-left&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#chevron-left&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-chevron-left">
+                        <svg class="icon icon-chevron-left" data-id="icon">
                             <use xlink:href="pap-icons.svg#chevron-left"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">chevron-left</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-chevron-left" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#chevron-left"></use>
+                        </svg>
+                        chevron-left
+                    </h4>
                 </li>
              <li title="chevron-right" class="IconsList__item" data-name="chevron-right">
+                    <div class="Tooltip">.icn-chevron-right<br />
+                        <strong>after: </strong>.icn-after-chevron-right
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-chevron-right&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#chevron-right&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-chevron-right">
+                        <svg class="icon icon-chevron-right" data-id="icon">
                             <use xlink:href="pap-icons.svg#chevron-right"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">chevron-right</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-chevron-right" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#chevron-right"></use>
+                        </svg>
+                        chevron-right
+                    </h4>
                 </li>
              <li title="chevron-up" class="IconsList__item" data-name="chevron-up">
+                    <div class="Tooltip">.icn-chevron-up<br />
+                        <strong>after: </strong>.icn-after-chevron-up
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-chevron-up&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#chevron-up&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-chevron-up">
+                        <svg class="icon icon-chevron-up" data-id="icon">
                             <use xlink:href="pap-icons.svg#chevron-up"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">chevron-up</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-chevron-up" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#chevron-up"></use>
+                        </svg>
+                        chevron-up
+                    </h4>
                 </li>
              <li title="clock" class="IconsList__item" data-name="clock">
+                    <div class="Tooltip">.icn-clock<br />
+                        <strong>after: </strong>.icn-after-clock
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-clock&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#clock&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-clock">
+                        <svg class="icon icon-clock" data-id="icon">
                             <use xlink:href="pap-icons.svg#clock"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">clock</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-clock" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#clock"></use>
+                        </svg>
+                        clock
+                    </h4>
                 </li>
              <li title="cloud" class="IconsList__item" data-name="cloud">
+                    <div class="Tooltip">.icn-cloud<br />
+                        <strong>after: </strong>.icn-after-cloud
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-cloud&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#cloud&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-cloud">
+                        <svg class="icon icon-cloud" data-id="icon">
                             <use xlink:href="pap-icons.svg#cloud"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">cloud</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-cloud" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#cloud"></use>
+                        </svg>
+                        cloud
+                    </h4>
                 </li>
              <li title="color-direction" class="IconsList__item" data-name="color-direction">
+                    <div class="Tooltip">.icn-color-direction<br />
+                        <strong>after: </strong>.icn-after-color-direction
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-color-direction&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#color-direction&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-color-direction">
+                        <svg class="icon icon-color-direction" data-id="icon">
                             <use xlink:href="pap-icons.svg#color-direction"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">color-direction</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-color-direction" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#color-direction"></use>
+                        </svg>
+                        color-direction
+                    </h4>
                 </li>
              <li title="color-dollar" class="IconsList__item" data-name="color-dollar">
+                    <div class="Tooltip">.icn-color-dollar<br />
+                        <strong>after: </strong>.icn-after-color-dollar
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-color-dollar&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#color-dollar&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-color-dollar">
+                        <svg class="icon icon-color-dollar" data-id="icon">
                             <use xlink:href="pap-icons.svg#color-dollar"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">color-dollar</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-color-dollar" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#color-dollar"></use>
+                        </svg>
+                        color-dollar
+                    </h4>
                 </li>
              <li title="color-earth" class="IconsList__item" data-name="color-earth">
+                    <div class="Tooltip">.icn-color-earth<br />
+                        <strong>after: </strong>.icn-after-color-earth
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-color-earth&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#color-earth&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-color-earth">
+                        <svg class="icon icon-color-earth" data-id="icon">
                             <use xlink:href="pap-icons.svg#color-earth"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">color-earth</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-color-earth" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#color-earth"></use>
+                        </svg>
+                        color-earth
+                    </h4>
                 </li>
              <li title="color-medal" class="IconsList__item" data-name="color-medal">
+                    <div class="Tooltip">.icn-color-medal<br />
+                        <strong>after: </strong>.icn-after-color-medal
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-color-medal&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#color-medal&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-color-medal">
+                        <svg class="icon icon-color-medal" data-id="icon">
                             <use xlink:href="pap-icons.svg#color-medal"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">color-medal</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-color-medal" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#color-medal"></use>
+                        </svg>
+                        color-medal
+                    </h4>
                 </li>
              <li title="color-percent" class="IconsList__item" data-name="color-percent">
+                    <div class="Tooltip">.icn-color-percent<br />
+                        <strong>after: </strong>.icn-after-color-percent
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-color-percent&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#color-percent&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-color-percent">
+                        <svg class="icon icon-color-percent" data-id="icon">
                             <use xlink:href="pap-icons.svg#color-percent"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">color-percent</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-color-percent" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#color-percent"></use>
+                        </svg>
+                        color-percent
+                    </h4>
                 </li>
              <li title="color-rocket" class="IconsList__item" data-name="color-rocket">
+                    <div class="Tooltip">.icn-color-rocket<br />
+                        <strong>after: </strong>.icn-after-color-rocket
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-color-rocket&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#color-rocket&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-color-rocket">
+                        <svg class="icon icon-color-rocket" data-id="icon">
                             <use xlink:href="pap-icons.svg#color-rocket"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">color-rocket</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-color-rocket" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#color-rocket"></use>
+                        </svg>
+                        color-rocket
+                    </h4>
                 </li>
              <li title="color-user" class="IconsList__item" data-name="color-user">
+                    <div class="Tooltip">.icn-color-user<br />
+                        <strong>after: </strong>.icn-after-color-user
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-color-user&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#color-user&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-color-user">
+                        <svg class="icon icon-color-user" data-id="icon">
                             <use xlink:href="pap-icons.svg#color-user"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">color-user</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-color-user" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#color-user"></use>
+                        </svg>
+                        color-user
+                    </h4>
                 </li>
              <li title="color-user-hat" class="IconsList__item" data-name="color-user-hat">
+                    <div class="Tooltip">.icn-color-user-hat<br />
+                        <strong>after: </strong>.icn-after-color-user-hat
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-color-user-hat&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#color-user-hat&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-color-user-hat">
+                        <svg class="icon icon-color-user-hat" data-id="icon">
                             <use xlink:href="pap-icons.svg#color-user-hat"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">color-user-hat</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-color-user-hat" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#color-user-hat"></use>
+                        </svg>
+                        color-user-hat
+                    </h4>
                 </li>
              <li title="color-user-tie" class="IconsList__item" data-name="color-user-tie">
+                    <div class="Tooltip">.icn-color-user-tie<br />
+                        <strong>after: </strong>.icn-after-color-user-tie
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-color-user-tie&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#color-user-tie&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-color-user-tie">
+                        <svg class="icon icon-color-user-tie" data-id="icon">
                             <use xlink:href="pap-icons.svg#color-user-tie"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">color-user-tie</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-color-user-tie" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#color-user-tie"></use>
+                        </svg>
+                        color-user-tie
+                    </h4>
                 </li>
              <li title="copy" class="IconsList__item" data-name="copy">
+                    <div class="Tooltip">.icn-copy<br />
+                        <strong>after: </strong>.icn-after-copy
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-copy&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#copy&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-copy">
+                        <svg class="icon icon-copy" data-id="icon">
                             <use xlink:href="pap-icons.svg#copy"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">copy</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-copy" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#copy"></use>
+                        </svg>
+                        copy
+                    </h4>
                 </li>
              <li title="dolar" class="IconsList__item" data-name="dolar">
+                    <div class="Tooltip">.icn-dolar<br />
+                        <strong>after: </strong>.icn-after-dolar
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-dolar&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#dolar&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-dolar">
+                        <svg class="icon icon-dolar" data-id="icon">
                             <use xlink:href="pap-icons.svg#dolar"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">dolar</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-dolar" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#dolar"></use>
+                        </svg>
+                        dolar
+                    </h4>
                 </li>
              <li title="drawer" class="IconsList__item" data-name="drawer">
+                    <div class="Tooltip">.icn-drawer<br />
+                        <strong>after: </strong>.icn-after-drawer
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-drawer&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#drawer&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-drawer">
+                        <svg class="icon icon-drawer" data-id="icon">
                             <use xlink:href="pap-icons.svg#drawer"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">drawer</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-drawer" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#drawer"></use>
+                        </svg>
+                        drawer
+                    </h4>
                 </li>
              <li title="dribbble" class="IconsList__item" data-name="dribbble">
+                    <div class="Tooltip">.icn-dribbble<br />
+                        <strong>after: </strong>.icn-after-dribbble
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-dribbble&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#dribbble&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-dribbble">
+                        <svg class="icon icon-dribbble" data-id="icon">
                             <use xlink:href="pap-icons.svg#dribbble"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">dribbble</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-dribbble" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#dribbble"></use>
+                        </svg>
+                        dribbble
+                    </h4>
                 </li>
              <li title="emoji-smiley" class="IconsList__item" data-name="emoji-smiley">
+                    <div class="Tooltip">.icn-emoji-smiley<br />
+                        <strong>after: </strong>.icn-after-emoji-smiley
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-emoji-smiley&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#emoji-smiley&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-emoji-smiley">
+                        <svg class="icon icon-emoji-smiley" data-id="icon">
                             <use xlink:href="pap-icons.svg#emoji-smiley"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">emoji-smiley</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-emoji-smiley" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#emoji-smiley"></use>
+                        </svg>
+                        emoji-smiley
+                    </h4>
                 </li>
              <li title="external" class="IconsList__item" data-name="external">
+                    <div class="Tooltip">.icn-external<br />
+                        <strong>after: </strong>.icn-after-external
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-external&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#external&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-external">
+                        <svg class="icon icon-external" data-id="icon">
                             <use xlink:href="pap-icons.svg#external"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">external</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-external" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#external"></use>
+                        </svg>
+                        external
+                    </h4>
                 </li>
              <li title="file" class="IconsList__item" data-name="file">
+                    <div class="Tooltip">.icn-file<br />
+                        <strong>after: </strong>.icn-after-file
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-file&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#file&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-file">
+                        <svg class="icon icon-file" data-id="icon">
                             <use xlink:href="pap-icons.svg#file"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">file</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-file" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#file"></use>
+                        </svg>
+                        file
+                    </h4>
                 </li>
              <li title="folder" class="IconsList__item" data-name="folder">
+                    <div class="Tooltip">.icn-folder<br />
+                        <strong>after: </strong>.icn-after-folder
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-folder&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#folder&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-folder">
+                        <svg class="icon icon-folder" data-id="icon">
                             <use xlink:href="pap-icons.svg#folder"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">folder</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-folder" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#folder"></use>
+                        </svg>
+                        folder
+                    </h4>
                 </li>
              <li title="folder-solid" class="IconsList__item" data-name="folder-solid">
+                    <div class="Tooltip">.icn-folder-solid<br />
+                        <strong>after: </strong>.icn-after-folder-solid
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-folder-solid&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#folder-solid&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-folder-solid">
+                        <svg class="icon icon-folder-solid" data-id="icon">
                             <use xlink:href="pap-icons.svg#folder-solid"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">folder-solid</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-folder-solid" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#folder-solid"></use>
+                        </svg>
+                        folder-solid
+                    </h4>
                 </li>
              <li title="github-brands" class="IconsList__item" data-name="github-brands">
+                    <div class="Tooltip">.icn-github-brands<br />
+                        <strong>after: </strong>.icn-after-github-brands
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-github-brands&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#github-brands&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-github-brands">
+                        <svg class="icon icon-github-brands" data-id="icon">
                             <use xlink:href="pap-icons.svg#github-brands"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">github-brands</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-github-brands" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#github-brands"></use>
+                        </svg>
+                        github-brands
+                    </h4>
                 </li>
              <li title="globe" class="IconsList__item" data-name="globe">
+                    <div class="Tooltip">.icn-globe<br />
+                        <strong>after: </strong>.icn-after-globe
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-globe&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#globe&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-globe">
+                        <svg class="icon icon-globe" data-id="icon">
                             <use xlink:href="pap-icons.svg#globe"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">globe</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-globe" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#globe"></use>
+                        </svg>
+                        globe
+                    </h4>
                 </li>
              <li title="graduation" class="IconsList__item" data-name="graduation">
+                    <div class="Tooltip">.icn-graduation<br />
+                        <strong>after: </strong>.icn-after-graduation
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graduation&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graduation&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graduation">
+                        <svg class="icon icon-graduation" data-id="icon">
                             <use xlink:href="pap-icons.svg#graduation"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graduation</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graduation" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graduation"></use>
+                        </svg>
+                        graduation
+                    </h4>
                 </li>
              <li title="graphics-book" class="IconsList__item" data-name="graphics-book">
+                    <div class="Tooltip">.icn-graphics-book<br />
+                        <strong>after: </strong>.icn-after-graphics-book
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-book&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-book&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-book">
+                        <svg class="icon icon-graphics-book" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-book"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-book</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-book" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-book"></use>
+                        </svg>
+                        graphics-book
+                    </h4>
                 </li>
              <li title="graphics-chart-bar" class="IconsList__item" data-name="graphics-chart-bar">
+                    <div class="Tooltip">.icn-graphics-chart-bar<br />
+                        <strong>after: </strong>.icn-after-graphics-chart-bar
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-chart-bar&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-chart-bar&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-chart-bar">
+                        <svg class="icon icon-graphics-chart-bar" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-chart-bar"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-chart-bar</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-chart-bar" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-chart-bar"></use>
+                        </svg>
+                        graphics-chart-bar
+                    </h4>
                 </li>
              <li title="graphics-chart-pie" class="IconsList__item" data-name="graphics-chart-pie">
+                    <div class="Tooltip">.icn-graphics-chart-pie<br />
+                        <strong>after: </strong>.icn-after-graphics-chart-pie
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-chart-pie&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-chart-pie&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-chart-pie">
+                        <svg class="icon icon-graphics-chart-pie" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-chart-pie"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-chart-pie</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-chart-pie" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-chart-pie"></use>
+                        </svg>
+                        graphics-chart-pie
+                    </h4>
                 </li>
              <li title="graphics-efficiency" class="IconsList__item" data-name="graphics-efficiency">
+                    <div class="Tooltip">.icn-graphics-efficiency<br />
+                        <strong>after: </strong>.icn-after-graphics-efficiency
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-efficiency&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-efficiency&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-efficiency">
+                        <svg class="icon icon-graphics-efficiency" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-efficiency"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-efficiency</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-efficiency" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-efficiency"></use>
+                        </svg>
+                        graphics-efficiency
+                    </h4>
                 </li>
              <li title="graphics-forward" class="IconsList__item" data-name="graphics-forward">
+                    <div class="Tooltip">.icn-graphics-forward<br />
+                        <strong>after: </strong>.icn-after-graphics-forward
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-forward&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-forward&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-forward">
+                        <svg class="icon icon-graphics-forward" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-forward"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-forward</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-forward" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-forward"></use>
+                        </svg>
+                        graphics-forward
+                    </h4>
                 </li>
              <li title="graphics-location" class="IconsList__item" data-name="graphics-location">
+                    <div class="Tooltip">.icn-graphics-location<br />
+                        <strong>after: </strong>.icn-after-graphics-location
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-location&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-location&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-location">
+                        <svg class="icon icon-graphics-location" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-location"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-location</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-location" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-location"></use>
+                        </svg>
+                        graphics-location
+                    </h4>
                 </li>
              <li title="graphics-man" class="IconsList__item" data-name="graphics-man">
+                    <div class="Tooltip">.icn-graphics-man<br />
+                        <strong>after: </strong>.icn-after-graphics-man
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-man&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-man&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-man">
+                        <svg class="icon icon-graphics-man" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-man"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-man</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-man" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-man"></use>
+                        </svg>
+                        graphics-man
+                    </h4>
                 </li>
              <li title="graphics-newsletter" class="IconsList__item" data-name="graphics-newsletter">
+                    <div class="Tooltip">.icn-graphics-newsletter<br />
+                        <strong>after: </strong>.icn-after-graphics-newsletter
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-newsletter&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-newsletter&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-newsletter">
+                        <svg class="icon icon-graphics-newsletter" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-newsletter"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-newsletter</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-newsletter" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-newsletter"></use>
+                        </svg>
+                        graphics-newsletter
+                    </h4>
                 </li>
              <li title="graphics-pricing-network" class="IconsList__item" data-name="graphics-pricing-network">
+                    <div class="Tooltip">.icn-graphics-pricing-network<br />
+                        <strong>after: </strong>.icn-after-graphics-pricing-network
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-pricing-network&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-pricing-network&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-pricing-network">
+                        <svg class="icon icon-graphics-pricing-network" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-pricing-network"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-pricing-network</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-pricing-network" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-pricing-network"></use>
+                        </svg>
+                        graphics-pricing-network
+                    </h4>
                 </li>
              <li title="graphics-pricing-pro" class="IconsList__item" data-name="graphics-pricing-pro">
+                    <div class="Tooltip">.icn-graphics-pricing-pro<br />
+                        <strong>after: </strong>.icn-after-graphics-pricing-pro
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-pricing-pro&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-pricing-pro&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-pricing-pro">
+                        <svg class="icon icon-graphics-pricing-pro" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-pricing-pro"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-pricing-pro</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-pricing-pro" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-pricing-pro"></use>
+                        </svg>
+                        graphics-pricing-pro
+                    </h4>
                 </li>
              <li title="graphics-pricing-ultimate" class="IconsList__item" data-name="graphics-pricing-ultimate">
+                    <div class="Tooltip">.icn-graphics-pricing-ultimate<br />
+                        <strong>after: </strong>.icn-after-graphics-pricing-ultimate
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-pricing-ultimate&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-pricing-ultimate&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-pricing-ultimate">
+                        <svg class="icon icon-graphics-pricing-ultimate" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-pricing-ultimate"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-pricing-ultimate</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-pricing-ultimate" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-pricing-ultimate"></use>
+                        </svg>
+                        graphics-pricing-ultimate
+                    </h4>
                 </li>
              <li title="graphics-progress" class="IconsList__item" data-name="graphics-progress">
+                    <div class="Tooltip">.icn-graphics-progress<br />
+                        <strong>after: </strong>.icn-after-graphics-progress
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-progress&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-progress&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-progress">
+                        <svg class="icon icon-graphics-progress" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-progress"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-progress</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-progress" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-progress"></use>
+                        </svg>
+                        graphics-progress
+                    </h4>
                 </li>
              <li title="graphics-protection" class="IconsList__item" data-name="graphics-protection">
+                    <div class="Tooltip">.icn-graphics-protection<br />
+                        <strong>after: </strong>.icn-after-graphics-protection
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-protection&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-protection&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-protection">
+                        <svg class="icon icon-graphics-protection" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-protection"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-protection</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-protection" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-protection"></use>
+                        </svg>
+                        graphics-protection
+                    </h4>
                 </li>
              <li title="graphics-puzzle" class="IconsList__item" data-name="graphics-puzzle">
+                    <div class="Tooltip">.icn-graphics-puzzle<br />
+                        <strong>after: </strong>.icn-after-graphics-puzzle
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-puzzle&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-puzzle&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-puzzle">
+                        <svg class="icon icon-graphics-puzzle" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-puzzle"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-puzzle</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-puzzle" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-puzzle"></use>
+                        </svg>
+                        graphics-puzzle
+                    </h4>
                 </li>
              <li title="graphics-recurring" class="IconsList__item" data-name="graphics-recurring">
+                    <div class="Tooltip">.icn-graphics-recurring<br />
+                        <strong>after: </strong>.icn-after-graphics-recurring
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-recurring&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-recurring&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-recurring">
+                        <svg class="icon icon-graphics-recurring" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-recurring"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-recurring</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-recurring" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-recurring"></use>
+                        </svg>
+                        graphics-recurring
+                    </h4>
                 </li>
              <li title="graphics-tracking" class="IconsList__item" data-name="graphics-tracking">
+                    <div class="Tooltip">.icn-graphics-tracking<br />
+                        <strong>after: </strong>.icn-after-graphics-tracking
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-tracking&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-tracking&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-tracking">
+                        <svg class="icon icon-graphics-tracking" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-tracking"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-tracking</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-tracking" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-tracking"></use>
+                        </svg>
+                        graphics-tracking
+                    </h4>
                 </li>
              <li title="graphics-users" class="IconsList__item" data-name="graphics-users">
+                    <div class="Tooltip">.icn-graphics-users<br />
+                        <strong>after: </strong>.icn-after-graphics-users
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-graphics-users&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#graphics-users&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-graphics-users">
+                        <svg class="icon icon-graphics-users" data-id="icon">
                             <use xlink:href="pap-icons.svg#graphics-users"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">graphics-users</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-graphics-users" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#graphics-users"></use>
+                        </svg>
+                        graphics-users
+                    </h4>
                 </li>
              <li title="headphones" class="IconsList__item" data-name="headphones">
+                    <div class="Tooltip">.icn-headphones<br />
+                        <strong>after: </strong>.icn-after-headphones
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-headphones&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#headphones&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-headphones">
+                        <svg class="icon icon-headphones" data-id="icon">
                             <use xlink:href="pap-icons.svg#headphones"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">headphones</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-headphones" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#headphones"></use>
+                        </svg>
+                        headphones
+                    </h4>
                 </li>
              <li title="heart" class="IconsList__item" data-name="heart">
+                    <div class="Tooltip">.icn-heart<br />
+                        <strong>after: </strong>.icn-after-heart
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-heart&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#heart&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-heart">
+                        <svg class="icon icon-heart" data-id="icon">
                             <use xlink:href="pap-icons.svg#heart"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">heart</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-heart" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#heart"></use>
+                        </svg>
+                        heart
+                    </h4>
                 </li>
              <li title="inbox" class="IconsList__item" data-name="inbox">
+                    <div class="Tooltip">.icn-inbox<br />
+                        <strong>after: </strong>.icn-after-inbox
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-inbox&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#inbox&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-inbox">
+                        <svg class="icon icon-inbox" data-id="icon">
                             <use xlink:href="pap-icons.svg#inbox"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">inbox</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-inbox" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#inbox"></use>
+                        </svg>
+                        inbox
+                    </h4>
                 </li>
              <li title="info-circle" class="IconsList__item" data-name="info-circle">
+                    <div class="Tooltip">.icn-info-circle<br />
+                        <strong>after: </strong>.icn-after-info-circle
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-info-circle&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#info-circle&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-info-circle">
+                        <svg class="icon icon-info-circle" data-id="icon">
                             <use xlink:href="pap-icons.svg#info-circle"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">info-circle</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-info-circle" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#info-circle"></use>
+                        </svg>
+                        info-circle
+                    </h4>
                 </li>
              <li title="info-solid" class="IconsList__item" data-name="info-solid">
+                    <div class="Tooltip">.icn-info-solid<br />
+                        <strong>after: </strong>.icn-after-info-solid
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-info-solid&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#info-solid&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-info-solid">
+                        <svg class="icon icon-info-solid" data-id="icon">
                             <use xlink:href="pap-icons.svg#info-solid"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">info-solid</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-info-solid" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#info-solid"></use>
+                        </svg>
+                        info-solid
+                    </h4>
                 </li>
              <li title="lightbulb" class="IconsList__item" data-name="lightbulb">
+                    <div class="Tooltip">.icn-lightbulb<br />
+                        <strong>after: </strong>.icn-after-lightbulb
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-lightbulb&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#lightbulb&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-lightbulb">
+                        <svg class="icon icon-lightbulb" data-id="icon">
                             <use xlink:href="pap-icons.svg#lightbulb"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">lightbulb</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-lightbulb" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#lightbulb"></use>
+                        </svg>
+                        lightbulb
+                    </h4>
                 </li>
              <li title="location-pin" class="IconsList__item" data-name="location-pin">
+                    <div class="Tooltip">.icn-location-pin<br />
+                        <strong>after: </strong>.icn-after-location-pin
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-location-pin&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#location-pin&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-location-pin">
+                        <svg class="icon icon-location-pin" data-id="icon">
                             <use xlink:href="pap-icons.svg#location-pin"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">location-pin</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-location-pin" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#location-pin"></use>
+                        </svg>
+                        location-pin
+                    </h4>
                 </li>
              <li title="mail" class="IconsList__item" data-name="mail">
+                    <div class="Tooltip">.icn-mail<br />
+                        <strong>after: </strong>.icn-after-mail
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-mail&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#mail&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-mail">
+                        <svg class="icon icon-mail" data-id="icon">
                             <use xlink:href="pap-icons.svg#mail"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">mail</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-mail" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#mail"></use>
+                        </svg>
+                        mail
+                    </h4>
                 </li>
              <li title="menu-automation" class="IconsList__item" data-name="menu-automation">
+                    <div class="Tooltip">.icn-menu-automation<br />
+                        <strong>after: </strong>.icn-after-menu-automation
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-menu-automation&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#menu-automation&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-menu-automation">
+                        <svg class="icon icon-menu-automation" data-id="icon">
                             <use xlink:href="pap-icons.svg#menu-automation"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">menu-automation</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-menu-automation" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#menu-automation"></use>
+                        </svg>
+                        menu-automation
+                    </h4>
                 </li>
              <li title="menu-business-solutions" class="IconsList__item" data-name="menu-business-solutions">
+                    <div class="Tooltip">.icn-menu-business-solutions<br />
+                        <strong>after: </strong>.icn-after-menu-business-solutions
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-menu-business-solutions&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#menu-business-solutions&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-menu-business-solutions">
+                        <svg class="icon icon-menu-business-solutions" data-id="icon">
                             <use xlink:href="pap-icons.svg#menu-business-solutions"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">menu-business-solutions</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-menu-business-solutions" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#menu-business-solutions"></use>
+                        </svg>
+                        menu-business-solutions
+                    </h4>
                 </li>
              <li title="menu-customer-portal" class="IconsList__item" data-name="menu-customer-portal">
+                    <div class="Tooltip">.icn-menu-customer-portal<br />
+                        <strong>after: </strong>.icn-after-menu-customer-portal
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-menu-customer-portal&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#menu-customer-portal&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-menu-customer-portal">
+                        <svg class="icon icon-menu-customer-portal" data-id="icon">
                             <use xlink:href="pap-icons.svg#menu-customer-portal"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">menu-customer-portal</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-menu-customer-portal" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#menu-customer-portal"></use>
+                        </svg>
+                        menu-customer-portal
+                    </h4>
                 </li>
              <li title="menu-directory" class="IconsList__item" data-name="menu-directory">
+                    <div class="Tooltip">.icn-menu-directory<br />
+                        <strong>after: </strong>.icn-after-menu-directory
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-menu-directory&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#menu-directory&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-menu-directory">
+                        <svg class="icon icon-menu-directory" data-id="icon">
                             <use xlink:href="pap-icons.svg#menu-directory"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">menu-directory</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-menu-directory" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#menu-directory"></use>
+                        </svg>
+                        menu-directory
+                    </h4>
                 </li>
              <li title="menu-directory-manager" class="IconsList__item" data-name="menu-directory-manager">
+                    <div class="Tooltip">.icn-menu-directory-manager<br />
+                        <strong>after: </strong>.icn-after-menu-directory-manager
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-menu-directory-manager&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#menu-directory-manager&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-menu-directory-manager">
+                        <svg class="icon icon-menu-directory-manager" data-id="icon">
                             <use xlink:href="pap-icons.svg#menu-directory-manager"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">menu-directory-manager</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-menu-directory-manager" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#menu-directory-manager"></use>
+                        </svg>
+                        menu-directory-manager
+                    </h4>
                 </li>
              <li title="menu-glossary" class="IconsList__item" data-name="menu-glossary">
+                    <div class="Tooltip">.icn-menu-glossary<br />
+                        <strong>after: </strong>.icn-after-menu-glossary
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-menu-glossary&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#menu-glossary&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-menu-glossary">
+                        <svg class="icon icon-menu-glossary" data-id="icon">
                             <use xlink:href="pap-icons.svg#menu-glossary"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">menu-glossary</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-menu-glossary" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#menu-glossary"></use>
+                        </svg>
+                        menu-glossary
+                    </h4>
                 </li>
              <li title="menu-help-desk" class="IconsList__item" data-name="menu-help-desk">
+                    <div class="Tooltip">.icn-menu-help-desk<br />
+                        <strong>after: </strong>.icn-after-menu-help-desk
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-menu-help-desk&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#menu-help-desk&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-menu-help-desk">
+                        <svg class="icon icon-menu-help-desk" data-id="icon">
                             <use xlink:href="pap-icons.svg#menu-help-desk"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">menu-help-desk</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-menu-help-desk" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#menu-help-desk"></use>
+                        </svg>
+                        menu-help-desk
+                    </h4>
                 </li>
              <li title="menu-reports" class="IconsList__item" data-name="menu-reports">
+                    <div class="Tooltip">.icn-menu-reports<br />
+                        <strong>after: </strong>.icn-after-menu-reports
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-menu-reports&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#menu-reports&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-menu-reports">
+                        <svg class="icon icon-menu-reports" data-id="icon">
                             <use xlink:href="pap-icons.svg#menu-reports"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">menu-reports</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-menu-reports" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#menu-reports"></use>
+                        </svg>
+                        menu-reports
+                    </h4>
                 </li>
              <li title="menu-templates" class="IconsList__item" data-name="menu-templates">
+                    <div class="Tooltip">.icn-menu-templates<br />
+                        <strong>after: </strong>.icn-after-menu-templates
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-menu-templates&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#menu-templates&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-menu-templates">
+                        <svg class="icon icon-menu-templates" data-id="icon">
                             <use xlink:href="pap-icons.svg#menu-templates"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">menu-templates</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-menu-templates" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#menu-templates"></use>
+                        </svg>
+                        menu-templates
+                    </h4>
                 </li>
              <li title="menu-tour" class="IconsList__item" data-name="menu-tour">
+                    <div class="Tooltip">.icn-menu-tour<br />
+                        <strong>after: </strong>.icn-after-menu-tour
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-menu-tour&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#menu-tour&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-menu-tour">
+                        <svg class="icon icon-menu-tour" data-id="icon">
                             <use xlink:href="pap-icons.svg#menu-tour"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">menu-tour</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-menu-tour" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#menu-tour"></use>
+                        </svg>
+                        menu-tour
+                    </h4>
                 </li>
              <li title="menu-typing-test" class="IconsList__item" data-name="menu-typing-test">
+                    <div class="Tooltip">.icn-menu-typing-test<br />
+                        <strong>after: </strong>.icn-after-menu-typing-test
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-menu-typing-test&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#menu-typing-test&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-menu-typing-test">
+                        <svg class="icon icon-menu-typing-test" data-id="icon">
                             <use xlink:href="pap-icons.svg#menu-typing-test"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">menu-typing-test</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-menu-typing-test" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#menu-typing-test"></use>
+                        </svg>
+                        menu-typing-test
+                    </h4>
                 </li>
              <li title="menu-use-cases" class="IconsList__item" data-name="menu-use-cases">
+                    <div class="Tooltip">.icn-menu-use-cases<br />
+                        <strong>after: </strong>.icn-after-menu-use-cases
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-menu-use-cases&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#menu-use-cases&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-menu-use-cases">
+                        <svg class="icon icon-menu-use-cases" data-id="icon">
                             <use xlink:href="pap-icons.svg#menu-use-cases"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">menu-use-cases</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-menu-use-cases" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#menu-use-cases"></use>
+                        </svg>
+                        menu-use-cases
+                    </h4>
                 </li>
              <li title="menubars" class="IconsList__item" data-name="menubars">
+                    <div class="Tooltip">.icn-menubars<br />
+                        <strong>after: </strong>.icn-after-menubars
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-menubars&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#menubars&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-menubars">
+                        <svg class="icon icon-menubars" data-id="icon">
                             <use xlink:href="pap-icons.svg#menubars"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">menubars</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-menubars" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#menubars"></use>
+                        </svg>
+                        menubars
+                    </h4>
                 </li>
              <li title="microscope" class="IconsList__item" data-name="microscope">
+                    <div class="Tooltip">.icn-microscope<br />
+                        <strong>after: </strong>.icn-after-microscope
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-microscope&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#microscope&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-microscope">
+                        <svg class="icon icon-microscope" data-id="icon">
                             <use xlink:href="pap-icons.svg#microscope"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">microscope</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-microscope" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#microscope"></use>
+                        </svg>
+                        microscope
+                    </h4>
                 </li>
              <li title="pencil" class="IconsList__item" data-name="pencil">
+                    <div class="Tooltip">.icn-pencil<br />
+                        <strong>after: </strong>.icn-after-pencil
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-pencil&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#pencil&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-pencil">
+                        <svg class="icon icon-pencil" data-id="icon">
                             <use xlink:href="pap-icons.svg#pencil"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">pencil</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-pencil" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#pencil"></use>
+                        </svg>
+                        pencil
+                    </h4>
                 </li>
              <li title="phone" class="IconsList__item" data-name="phone">
+                    <div class="Tooltip">.icn-phone<br />
+                        <strong>after: </strong>.icn-after-phone
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-phone&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#phone&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-phone">
+                        <svg class="icon icon-phone" data-id="icon">
                             <use xlink:href="pap-icons.svg#phone"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">phone</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-phone" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#phone"></use>
+                        </svg>
+                        phone
+                    </h4>
                 </li>
              <li title="photo" class="IconsList__item" data-name="photo">
+                    <div class="Tooltip">.icn-photo<br />
+                        <strong>after: </strong>.icn-after-photo
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-photo&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#photo&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-photo">
+                        <svg class="icon icon-photo" data-id="icon">
                             <use xlink:href="pap-icons.svg#photo"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">photo</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-photo" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#photo"></use>
+                        </svg>
+                        photo
+                    </h4>
                 </li>
              <li title="play" class="IconsList__item" data-name="play">
+                    <div class="Tooltip">.icn-play<br />
+                        <strong>after: </strong>.icn-after-play
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-play&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#play&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-play">
+                        <svg class="icon icon-play" data-id="icon">
                             <use xlink:href="pap-icons.svg#play"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">play</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-play" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#play"></use>
+                        </svg>
+                        play
+                    </h4>
                 </li>
              <li title="play-circle" class="IconsList__item" data-name="play-circle">
+                    <div class="Tooltip">.icn-play-circle<br />
+                        <strong>after: </strong>.icn-after-play-circle
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-play-circle&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#play-circle&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-play-circle">
+                        <svg class="icon icon-play-circle" data-id="icon">
                             <use xlink:href="pap-icons.svg#play-circle"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">play-circle</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-play-circle" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#play-circle"></use>
+                        </svg>
+                        play-circle
+                    </h4>
                 </li>
              <li title="presentation" class="IconsList__item" data-name="presentation">
+                    <div class="Tooltip">.icn-presentation<br />
+                        <strong>after: </strong>.icn-after-presentation
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-presentation&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#presentation&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-presentation">
+                        <svg class="icon icon-presentation" data-id="icon">
                             <use xlink:href="pap-icons.svg#presentation"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">presentation</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-presentation" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#presentation"></use>
+                        </svg>
+                        presentation
+                    </h4>
                 </li>
              <li title="quote" class="IconsList__item" data-name="quote">
+                    <div class="Tooltip">.icn-quote<br />
+                        <strong>after: </strong>.icn-after-quote
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-quote&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#quote&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-quote">
+                        <svg class="icon icon-quote" data-id="icon">
                             <use xlink:href="pap-icons.svg#quote"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">quote</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-quote" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#quote"></use>
+                        </svg>
+                        quote
+                    </h4>
                 </li>
              <li title="search" class="IconsList__item" data-name="search">
+                    <div class="Tooltip">.icn-search<br />
+                        <strong>after: </strong>.icn-after-search
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-search&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#search&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-search">
+                        <svg class="icon icon-search" data-id="icon">
                             <use xlink:href="pap-icons.svg#search"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">search</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-search" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#search"></use>
+                        </svg>
+                        search
+                    </h4>
                 </li>
              <li title="share" class="IconsList__item" data-name="share">
+                    <div class="Tooltip">.icn-share<br />
+                        <strong>after: </strong>.icn-after-share
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-share&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#share&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-share">
+                        <svg class="icon icon-share" data-id="icon">
                             <use xlink:href="pap-icons.svg#share"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">share</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-share" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#share"></use>
+                        </svg>
+                        share
+                    </h4>
                 </li>
              <li title="shop" class="IconsList__item" data-name="shop">
+                    <div class="Tooltip">.icn-shop<br />
+                        <strong>after: </strong>.icn-after-shop
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-shop&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#shop&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-shop">
+                        <svg class="icon icon-shop" data-id="icon">
                             <use xlink:href="pap-icons.svg#shop"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">shop</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-shop" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#shop"></use>
+                        </svg>
+                        shop
+                    </h4>
                 </li>
              <li title="social-facebook" class="IconsList__item" data-name="social-facebook">
+                    <div class="Tooltip">.icn-social-facebook<br />
+                        <strong>after: </strong>.icn-after-social-facebook
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-social-facebook&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#social-facebook&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-social-facebook">
+                        <svg class="icon icon-social-facebook" data-id="icon">
                             <use xlink:href="pap-icons.svg#social-facebook"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">social-facebook</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-social-facebook" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#social-facebook"></use>
+                        </svg>
+                        social-facebook
+                    </h4>
                 </li>
              <li title="social-instagram" class="IconsList__item" data-name="social-instagram">
+                    <div class="Tooltip">.icn-social-instagram<br />
+                        <strong>after: </strong>.icn-after-social-instagram
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-social-instagram&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#social-instagram&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-social-instagram">
+                        <svg class="icon icon-social-instagram" data-id="icon">
                             <use xlink:href="pap-icons.svg#social-instagram"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">social-instagram</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-social-instagram" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#social-instagram"></use>
+                        </svg>
+                        social-instagram
+                    </h4>
                 </li>
              <li title="social-linkedin" class="IconsList__item" data-name="social-linkedin">
+                    <div class="Tooltip">.icn-social-linkedin<br />
+                        <strong>after: </strong>.icn-after-social-linkedin
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-social-linkedin&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#social-linkedin&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-social-linkedin">
+                        <svg class="icon icon-social-linkedin" data-id="icon">
                             <use xlink:href="pap-icons.svg#social-linkedin"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">social-linkedin</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-social-linkedin" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#social-linkedin"></use>
+                        </svg>
+                        social-linkedin
+                    </h4>
                 </li>
              <li title="social-twitter" class="IconsList__item" data-name="social-twitter">
+                    <div class="Tooltip">.icn-social-twitter<br />
+                        <strong>after: </strong>.icn-after-social-twitter
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-social-twitter&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#social-twitter&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-social-twitter">
+                        <svg class="icon icon-social-twitter" data-id="icon">
                             <use xlink:href="pap-icons.svg#social-twitter"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">social-twitter</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-social-twitter" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#social-twitter"></use>
+                        </svg>
+                        social-twitter
+                    </h4>
                 </li>
              <li title="social-whatsapp" class="IconsList__item" data-name="social-whatsapp">
+                    <div class="Tooltip">.icn-social-whatsapp<br />
+                        <strong>after: </strong>.icn-after-social-whatsapp
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-social-whatsapp&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#social-whatsapp&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-social-whatsapp">
+                        <svg class="icon icon-social-whatsapp" data-id="icon">
                             <use xlink:href="pap-icons.svg#social-whatsapp"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">social-whatsapp</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-social-whatsapp" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#social-whatsapp"></use>
+                        </svg>
+                        social-whatsapp
+                    </h4>
                 </li>
              <li title="social-youtube" class="IconsList__item" data-name="social-youtube">
+                    <div class="Tooltip">.icn-social-youtube<br />
+                        <strong>after: </strong>.icn-after-social-youtube
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-social-youtube&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#social-youtube&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-social-youtube">
+                        <svg class="icon icon-social-youtube" data-id="icon">
                             <use xlink:href="pap-icons.svg#social-youtube"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">social-youtube</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-social-youtube" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#social-youtube"></use>
+                        </svg>
+                        social-youtube
+                    </h4>
                 </li>
              <li title="star" class="IconsList__item" data-name="star">
+                    <div class="Tooltip">.icn-star<br />
+                        <strong>after: </strong>.icn-after-star
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-star&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#star&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-star">
+                        <svg class="icon icon-star" data-id="icon">
                             <use xlink:href="pap-icons.svg#star"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">star</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-star" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#star"></use>
+                        </svg>
+                        star
+                    </h4>
                 </li>
              <li title="star-solid" class="IconsList__item" data-name="star-solid">
+                    <div class="Tooltip">.icn-star-solid<br />
+                        <strong>after: </strong>.icn-after-star-solid
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-star-solid&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#star-solid&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-star-solid">
+                        <svg class="icon icon-star-solid" data-id="icon">
                             <use xlink:href="pap-icons.svg#star-solid"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">star-solid</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-star-solid" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#star-solid"></use>
+                        </svg>
+                        star-solid
+                    </h4>
                 </li>
              <li title="tab-graph" class="IconsList__item" data-name="tab-graph">
+                    <div class="Tooltip">.icn-tab-graph<br />
+                        <strong>after: </strong>.icn-after-tab-graph
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-tab-graph&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#tab-graph&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-tab-graph">
+                        <svg class="icon icon-tab-graph" data-id="icon">
                             <use xlink:href="pap-icons.svg#tab-graph"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">tab-graph</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-tab-graph" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#tab-graph"></use>
+                        </svg>
+                        tab-graph
+                    </h4>
                 </li>
              <li title="tab-heart" class="IconsList__item" data-name="tab-heart">
+                    <div class="Tooltip">.icn-tab-heart<br />
+                        <strong>after: </strong>.icn-after-tab-heart
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-tab-heart&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#tab-heart&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-tab-heart">
+                        <svg class="icon icon-tab-heart" data-id="icon">
                             <use xlink:href="pap-icons.svg#tab-heart"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">tab-heart</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-tab-heart" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#tab-heart"></use>
+                        </svg>
+                        tab-heart
+                    </h4>
                 </li>
              <li title="tab-heart2" class="IconsList__item" data-name="tab-heart2">
+                    <div class="Tooltip">.icn-tab-heart2<br />
+                        <strong>after: </strong>.icn-after-tab-heart2
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-tab-heart2&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#tab-heart2&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-tab-heart2">
+                        <svg class="icon icon-tab-heart2" data-id="icon">
                             <use xlink:href="pap-icons.svg#tab-heart2"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">tab-heart2</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-tab-heart2" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#tab-heart2"></use>
+                        </svg>
+                        tab-heart2
+                    </h4>
                 </li>
              <li title="tab-person" class="IconsList__item" data-name="tab-person">
+                    <div class="Tooltip">.icn-tab-person<br />
+                        <strong>after: </strong>.icn-after-tab-person
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-tab-person&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#tab-person&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-tab-person">
+                        <svg class="icon icon-tab-person" data-id="icon">
                             <use xlink:href="pap-icons.svg#tab-person"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">tab-person</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-tab-person" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#tab-person"></use>
+                        </svg>
+                        tab-person
+                    </h4>
                 </li>
              <li title="tab-pricetag" class="IconsList__item" data-name="tab-pricetag">
+                    <div class="Tooltip">.icn-tab-pricetag<br />
+                        <strong>after: </strong>.icn-after-tab-pricetag
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-tab-pricetag&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#tab-pricetag&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-tab-pricetag">
+                        <svg class="icon icon-tab-pricetag" data-id="icon">
                             <use xlink:href="pap-icons.svg#tab-pricetag"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">tab-pricetag</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-tab-pricetag" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#tab-pricetag"></use>
+                        </svg>
+                        tab-pricetag
+                    </h4>
                 </li>
              <li title="tab-rocket" class="IconsList__item" data-name="tab-rocket">
+                    <div class="Tooltip">.icn-tab-rocket<br />
+                        <strong>after: </strong>.icn-after-tab-rocket
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-tab-rocket&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#tab-rocket&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-tab-rocket">
+                        <svg class="icon icon-tab-rocket" data-id="icon">
                             <use xlink:href="pap-icons.svg#tab-rocket"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">tab-rocket</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-tab-rocket" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#tab-rocket"></use>
+                        </svg>
+                        tab-rocket
+                    </h4>
                 </li>
              <li title="tab-smiley" class="IconsList__item" data-name="tab-smiley">
+                    <div class="Tooltip">.icn-tab-smiley<br />
+                        <strong>after: </strong>.icn-after-tab-smiley
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-tab-smiley&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#tab-smiley&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-tab-smiley">
+                        <svg class="icon icon-tab-smiley" data-id="icon">
                             <use xlink:href="pap-icons.svg#tab-smiley"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">tab-smiley</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-tab-smiley" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#tab-smiley"></use>
+                        </svg>
+                        tab-smiley
+                    </h4>
                 </li>
              <li title="tab-star" class="IconsList__item" data-name="tab-star">
+                    <div class="Tooltip">.icn-tab-star<br />
+                        <strong>after: </strong>.icn-after-tab-star
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-tab-star&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#tab-star&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-tab-star">
+                        <svg class="icon icon-tab-star" data-id="icon">
                             <use xlink:href="pap-icons.svg#tab-star"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">tab-star</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-tab-star" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#tab-star"></use>
+                        </svg>
+                        tab-star
+                    </h4>
                 </li>
              <li title="tab-stars" class="IconsList__item" data-name="tab-stars">
+                    <div class="Tooltip">.icn-tab-stars<br />
+                        <strong>after: </strong>.icn-after-tab-stars
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-tab-stars&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#tab-stars&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-tab-stars">
+                        <svg class="icon icon-tab-stars" data-id="icon">
                             <use xlink:href="pap-icons.svg#tab-stars"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">tab-stars</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-tab-stars" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#tab-stars"></use>
+                        </svg>
+                        tab-stars
+                    </h4>
                 </li>
              <li title="tab-thumbsup" class="IconsList__item" data-name="tab-thumbsup">
+                    <div class="Tooltip">.icn-tab-thumbsup<br />
+                        <strong>after: </strong>.icn-after-tab-thumbsup
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-tab-thumbsup&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#tab-thumbsup&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-tab-thumbsup">
+                        <svg class="icon icon-tab-thumbsup" data-id="icon">
                             <use xlink:href="pap-icons.svg#tab-thumbsup"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">tab-thumbsup</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-tab-thumbsup" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#tab-thumbsup"></use>
+                        </svg>
+                        tab-thumbsup
+                    </h4>
                 </li>
              <li title="thumbsup" class="IconsList__item" data-name="thumbsup">
+                    <div class="Tooltip">.icn-thumbsup<br />
+                        <strong>after: </strong>.icn-after-thumbsup
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-thumbsup&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#thumbsup&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-thumbsup">
+                        <svg class="icon icon-thumbsup" data-id="icon">
                             <use xlink:href="pap-icons.svg#thumbsup"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">thumbsup</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-thumbsup" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#thumbsup"></use>
+                        </svg>
+                        thumbsup
+                    </h4>
                 </li>
              <li title="times" class="IconsList__item" data-name="times">
+                    <div class="Tooltip">.icn-times<br />
+                        <strong>after: </strong>.icn-after-times
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-times&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#times&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-times">
+                        <svg class="icon icon-times" data-id="icon">
                             <use xlink:href="pap-icons.svg#times"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">times</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-times" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#times"></use>
+                        </svg>
+                        times
+                    </h4>
                 </li>
              <li title="times-circle-regular" class="IconsList__item" data-name="times-circle-regular">
+                    <div class="Tooltip">.icn-times-circle-regular<br />
+                        <strong>after: </strong>.icn-after-times-circle-regular
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-times-circle-regular&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#times-circle-regular&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-times-circle-regular">
+                        <svg class="icon icon-times-circle-regular" data-id="icon">
                             <use xlink:href="pap-icons.svg#times-circle-regular"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">times-circle-regular</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-times-circle-regular" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#times-circle-regular"></use>
+                        </svg>
+                        times-circle-regular
+                    </h4>
                 </li>
              <li title="trophy" class="IconsList__item" data-name="trophy">
+                    <div class="Tooltip">.icn-trophy<br />
+                        <strong>after: </strong>.icn-after-trophy
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-trophy&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#trophy&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-trophy">
+                        <svg class="icon icon-trophy" data-id="icon">
                             <use xlink:href="pap-icons.svg#trophy"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">trophy</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-trophy" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#trophy"></use>
+                        </svg>
+                        trophy
+                    </h4>
                 </li>
              <li title="user" class="IconsList__item" data-name="user">
+                    <div class="Tooltip">.icn-user<br />
+                        <strong>after: </strong>.icn-after-user
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-user&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#user&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-user">
+                        <svg class="icon icon-user" data-id="icon">
                             <use xlink:href="pap-icons.svg#user"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">user</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-user" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#user"></use>
+                        </svg>
+                        user
+                    </h4>
                 </li>
              <li title="user-alt" class="IconsList__item" data-name="user-alt">
+                    <div class="Tooltip">.icn-user-alt<br />
+                        <strong>after: </strong>.icn-after-user-alt
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-user-alt&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#user-alt&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-user-alt">
+                        <svg class="icon icon-user-alt" data-id="icon">
                             <use xlink:href="pap-icons.svg#user-alt"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">user-alt</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-user-alt" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#user-alt"></use>
+                        </svg>
+                        user-alt
+                    </h4>
                 </li>
              <li title="users-alt" class="IconsList__item" data-name="users-alt">
+                    <div class="Tooltip">.icn-users-alt<br />
+                        <strong>after: </strong>.icn-after-users-alt
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-users-alt&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#users-alt&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-users-alt">
+                        <svg class="icon icon-users-alt" data-id="icon">
                             <use xlink:href="pap-icons.svg#users-alt"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">users-alt</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-users-alt" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#users-alt"></use>
+                        </svg>
+                        users-alt
+                    </h4>
                 </li>
              <li title="wordpress" class="IconsList__item" data-name="wordpress">
+                    <div class="Tooltip">.icn-wordpress<br />
+                        <strong>after: </strong>.icn-after-wordpress
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-wordpress&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#wordpress&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-wordpress">
+                        <svg class="icon icon-wordpress" data-id="icon">
                             <use xlink:href="pap-icons.svg#wordpress"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">wordpress</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-wordpress" data-id="icon-small">
+                            <use xlink:href="pap-icons.svg#wordpress"></use>
+                        </svg>
+                        wordpress
+                    </h4>
                 </li>
          </ul>
 
@@ -1266,7 +2946,7 @@ embedded above. They may be styled via CSS.
 
         </section>
         <footer>
-            <p>Generated at Tue, 18 Oct 2022 12:02:36 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+            <p>Generated at Wed, 19 Oct 2022 09:26:50 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
         </footer>
 
         <script src="../js/script.js"></script>
