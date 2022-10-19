@@ -95,10 +95,45 @@ body {
   padding: 0;
   margin: 0;
   color: #666;
-  background: #fafafa;
+  background: #eee;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
   line-height: 1.4; }
+
+.reference {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh; }
+  .reference-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 1180px;
+    margin: 0 auto; }
+  .reference-link {
+    display: block;
+    color: #666;
+    background-color: #fff;
+    border: 1px dotted #000;
+    padding: 1.5em;
+    text-align: center;
+    text-decoration: underline;
+    margin: 0 1.5em; }
+    .reference-link:hover {
+      color: #da2d58; }
+    .reference-link img {
+      height: 3em;
+      margin-bottom: .5em; }
 
 .instructions {
   display: none; }
