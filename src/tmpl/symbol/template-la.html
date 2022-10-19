@@ -43,12 +43,16 @@ for further details on how to create this embeddable sprite variant.
         <header>
             <h1>LiveAgent icon reference</h1>
             <p>This preview shows icons from generated sprite in conjunction with external SVG.</p>
-
-            <h2>How to show icon in the content</h2>
+            <br /><br />
+            <label class="instructions-show" for="showInstructions">
+                <h2>How to insert icon in the content (click for details)</h2>
+            </label>
+            <input id="showInstructions" class="hidden" type="checkbox" />
+        <div class="instructions">
             <p>
                 You can show icon either via class or directly calling icon sprite in PHP code.
             </p>
-
+            <br /><br />
             <h3>Class method</h3>
             <p>
                 Add class <code>icn-ICON_NAME</code> to the element where you want to show the icon. It will be placed INSIDE that element as a <strong>first child</strong>, similar to <code>:before</code> in CSS.
@@ -115,6 +119,7 @@ for further details on how to create this embeddable sprite variant.
     </code>
 </pre>
             </p>
+        </div>
         </header>
         <section>
 
@@ -129,14 +134,14 @@ embedded above. They may be styled via CSS.
             <div class="Filter">
                 <div class="searchField">
                     <svg class="searchField__icon">
-                        <use xlink:href="la-icons.svg#search"></use>
+                        <use xlink:href="{{{example}}}#search"></use>
                     </svg>
                     <input type="search" class="search search--use-cases" placeholder="Search icon" maxlength="50">
                 </div>
 
                 <div class="FilterMenu">
                     <div class="FilterMenu__title flex flex-align-center">
-                        Select icon category
+                        Select category
                     </div>
                     <div class="FilterMenu__items">
                         <div class="FilterMenu__items--inn">
@@ -149,18 +154,38 @@ embedded above. They may be styled via CSS.
                         </div>
                     </div>
                 </div>
+                <div class="iconSize">
+                    <input type="range" class="iconSize-range" data-target="icon" min="16" max="72" step="1" value="72" />
+                    <strong class="iconSize-size" data-id="iconSize">72px</strong>
+                </div>
+                <div class="iconColor">
+                    <input type="color" class="iconColor-range" data-target="icon" value="#000000" />
+                </div>
             </div>
 
 
             <ul class="IconsList">
 
 {{#shapes}}             <li title="{{name}}" class="IconsList__item" data-name="{{name}}">
+                    <div class="Tooltip">.icn-{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}<br />
+                        <strong>after: </strong>.icn-after-{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}
+                        <br /><br />
+                        <small>&lt;svg class=&quot;icon icon-{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}&quot;&gt;<br />
+                            &lt;use xlink:href=&quot;icons.svg#{{name}}&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                        </small>
+                    </div>
                     <div class="icon-box">
-                        <svg class="icon icon-{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}">
+                        <svg class="icon icon-{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}" data-id="icon">
                             <use xlink:href="{{{example}}}#{{name}}"></use>
                         </svg>
                     </div>
-                    <h4 class="IconsList__item--title">{{name}}</h4>
+                    <h4 class="IconsList__item--title">
+                        <svg class="icon icon-{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}" data-id="icon-small">
+                            <use xlink:href="{{{example}}}#{{name}}"></use>
+                        </svg>
+                        {{name}}
+                    </h4>
                 </li>
 {{/shapes}}         </ul>
 

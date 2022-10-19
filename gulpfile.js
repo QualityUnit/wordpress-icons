@@ -18,11 +18,12 @@ gulp.task( 'browser-sync', () => {
 	browserSync.init({
 			server: {
 					baseDir: "./docs"
-			}
+			},
+			open: false,
 	});
 
 	gulp.watch( './src/scss/**/*.scss', gulp.series( 'styles' ) );
-	// gulp.watch( './src/js/**/*.js', gulp.series( 'scripts' ) );
+	gulp.watch( './src/js/**/*.js', gulp.series( 'scripts' ) );
 
 	gulp.watch(
 		['./icons/**/*.svg', './src/tmpl/**/*.html'],

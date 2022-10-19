@@ -12,6 +12,22 @@
 		line-height: 1.4;
 }
 
+.instructions {
+	display: none;
+
+	&-show {
+		cursor: pointer;
+
+		&:hover {
+			color:rgb(218, 45, 88);
+		}
+	}
+
+	input:checked + & {
+		display: block;
+	}
+}
+
 header {
 		display: block;
 		padding: 3em 3em 2em;
@@ -28,11 +44,13 @@ section {
 }
 
 .IconsList {
+		position: relative;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
 		grid-gap: 1em;
 		margin: 0 0 3em;
 		padding: 0;
+		z-index: 2;
 }
 
 .IconsList__title {
@@ -51,22 +69,33 @@ section {
 }
 
 .IconsList__item h4 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		margin: 1em 0 0 0;
 		padding: 0;
 		font-size: 1em;
 		font-weight: 400;
+
+		.icon {
+			@include square(1.25em);
+			display: inline-block;
+			margin-right: .5em;
+		}
 }
 
 .icon-box {
-		margin: 0;
+		margin: 0 auto;
+		padding: .25em;
 		position: relative;
 		background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
 		border: 1px solid #ccc;
 		text-align: center;
-}
 
-.icon {
-		display: inline-block;
+		.icon {
+				@include square(4.5em);
+				display: inline-block;
+		}
 }
 
 h1 {

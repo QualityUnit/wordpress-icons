@@ -1,0 +1,46 @@
+/* stylelint-disable selector-class-pattern */
+
+.Tooltip {
+
+	@include color(color, font-color-light);
+	position: absolute;
+	visibility: hidden;
+	width: 150%;
+	left: 50%;
+	top: 0;
+	transform: translate(-50%, -100%);
+	background-color: $black;
+	text-align: center;
+	font-size: 1rem;
+	line-height: 1.56;
+	border-radius: 6px;
+	padding: 10px;
+	z-index: 1;
+
+	a,
+	a:visited {
+
+		@include color(color, font-color-light);
+		text-decoration: underline;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		border-width: 5px;
+		border-style: solid;
+		border-color: #000 transparent transparent;
+	}
+
+	*:hover > & {
+		visibility: visible;
+	}
+
+	@media (max-width: $breakpoint-desktop) {
+
+		display: none !important;
+	}
+}

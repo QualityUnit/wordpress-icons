@@ -100,6 +100,15 @@ body {
   font-size: 1em;
   line-height: 1.4; }
 
+.instructions {
+  display: none; }
+  .instructions-show {
+    cursor: pointer; }
+    .instructions-show:hover {
+      color: #da2d58; }
+  input:checked + .instructions {
+    display: block; }
+
 header {
   display: block;
   padding: 3em 3em 2em;
@@ -113,11 +122,13 @@ section {
   padding: 2em 3em 0; }
 
 .IconsList {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
   grid-gap: 1em;
   margin: 0 0 3em;
-  padding: 0; }
+  padding: 0;
+  z-index: 2; }
 
 .IconsList__title {
   grid-column: 1/-1;
@@ -133,20 +144,36 @@ section {
   cursor: default; }
 
 .IconsList__item h4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 1em 0 0 0;
   padding: 0;
   font-size: 1em;
   font-weight: 400; }
+  .IconsList__item h4 .icon {
+    width: 1.25em;
+    height: 1.25em;
+    display: inline-block;
+    margin-right: .5em; }
 
 .icon-box {
-  margin: 0;
+  margin: 0 auto;
+  padding: .25em;
   position: relative;
   background: #ccc url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath fill='%23fff' d='M6 0h6v6H6zM0 6h6v6H0z'/%3E%3C/svg%3E") top left repeat;
   border: 1px solid #ccc;
   text-align: center; }
-
-.icon {
-  display: inline-block; }
+  .icon-box .icon {
+    width: 4.5em;
+    height: 4.5em;
+    display: inline-block; }
 
 h1 {
   margin-top: 0; }
@@ -307,19 +334,9 @@ textarea {
         align-content: center;
     width: 100%;
     cursor: pointer; }
-    .checkbox label::before {
-      content: "";
-      width: 1.429em;
-      height: 1.429em;
-      background: url(../images/checkbox-inactive.svg) center center no-repeat;
-      background-size: contain;
-      margin-right: 0.75em; }
-    @media (hover: hover) {
-      .checkbox label:hover::before {
-        background-image: url(../images/checkbox-hover.svg); } }
-  .checkbox [type="checkbox"]:checked + label::before,
-  .checkbox [type="radio"]:checked + label::before {
-    background-image: url(../images/checkbox-active.svg); }
+  .checkbox [type="checkbox"]:checked + label,
+  .checkbox [type="radio"]:checked + label {
+    color: #fa9531; }
 
 .sorting {
   color: #65676b;
@@ -348,6 +365,47 @@ textarea {
       opacity: 0; }
   .sorting [type="radio"]:checked + label::before {
     opacity: 1; }
+
+/* stylelint-disable selector-class-pattern */
+.Tooltip {
+  color: #fff ;
+  color: var(--font-color-light) ;
+  position: absolute;
+  visibility: hidden;
+  width: 150%;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translate(-50%, -100%);
+      -ms-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  background-color: #050505;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.56;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 1; }
+  .Tooltip a,
+  .Tooltip a:visited {
+    color: #fff ;
+    color: var(--font-color-light) ;
+    text-decoration: underline; }
+  .Tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000 transparent transparent; }
+  *:hover > .Tooltip {
+    visibility: visible; }
+  @media (max-width: 1180px) {
+    .Tooltip {
+      display: none !important; } }
 
 /* stylelint-disable selector-class-pattern */
 * {
@@ -571,8 +629,9 @@ figure {
             filter: brightness(0.5); } }
 
 .FilterMenu {
-  position: relative;
-  z-index: 3; }
+  position: relative; }
+  .FilterMenu.active {
+    z-index: 5; }
   .FilterMenu__desc {
     font-size: 0.875rem;
     line-height: 1; }
@@ -600,7 +659,8 @@ figure {
       width: 0.65em;
       height: 0.65em;
       border-color: #050505;
-      border-width: 2px; }
+      border-width: 2px;
+      margin-left: .5em; }
     .FilterMenu__title.active {
       color: #fa9531;
       border-color: currentcolor; }
@@ -659,7 +719,7 @@ figure {
       overflow-y: scroll;
       position: relative;
       margin-left: -1.45em;
-      margin-right: -1.95em; }
+      margin-right: -1.45em; }
       .FilterMenu__items--inn::-webkit-scrollbar-track {
         background-color: transparent; }
       .FilterMenu__items--inn::-webkit-scrollbar-thumb {
@@ -668,8 +728,6 @@ figure {
         height: 5em; }
       .FilterMenu__items--inn::-webkit-scrollbar {
         width: 8px; }
-      .FilterMenu__items--inn.has-scrollbar {
-        margin-right: -1.45em; }
     .FilterMenu__items.active {
       display: block; }
     .FilterMenu__items.visible {
@@ -723,5 +781,17 @@ figure {
       .Filter .FilterMenu {
         margin-top: 0;
         margin-left: 0.75em; }
-      .Filter .Category__content__description {
-        margin-left: auto; } }
+      .Filter .iconSize {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .Filter .iconSize-size {
+          margin-left: .5em; }
+        .Filter .iconSize-range {
+          margin-left: 1em;
+          cursor: pointer; }
+      .Filter .iconColor {
+        margin-left: .5em; } }

@@ -7,6 +7,7 @@ if ( FilterMenus.length > 0 ) {
 
 		const hideMenu = () => {
 			if ( menuItems.classList.contains( 'visible' ) ) {
+				filtermenu.classList.remove( 'active' );
 				menuItems.classList.remove( 'visible' );
 				menuTitle.classList.remove( 'active' );
 				setTimeout( () => {
@@ -17,6 +18,8 @@ if ( FilterMenus.length > 0 ) {
 
 		menuTitle.addEventListener( 'click', () => {
 			if ( ! menuItems.classList.contains( 'active' ) ) {
+
+				filtermenu.classList.add( 'active' );
 				menuTitle.classList.add( 'active' );
 				menuItems.classList.add( 'active' );
 				setTimeout( () => {

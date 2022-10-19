@@ -45,8 +45,22 @@
 			margin-left: 0.75em;
 		}
 
-		.Category__content__description {
-			margin-left: auto;
+		.iconSize {
+			display: flex;
+			align-items: center;
+
+			&-size {
+				margin-left: .5em;
+			}
+
+			&-range {
+				margin-left: 1em;
+				cursor: pointer;
+			}
+		}
+
+		.iconColor {
+			margin-left: .5em;
 		}
 	}
 }
