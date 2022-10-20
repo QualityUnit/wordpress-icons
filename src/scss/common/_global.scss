@@ -95,6 +95,7 @@ section {
 
 .IconsList .IconsList__item {
 		display: block;
+		text-align: center;
 		background-color: #fff;
 		position: relative;
 		border: 1px solid #ccc;
@@ -119,14 +120,15 @@ section {
 }
 
 .icon-box {
+		display: inline-block;
 		margin: 0 auto;
-		padding: .25em;
 		position: relative;
 		text-align: center;
+		background-color: $light-gray;
 
 		.icon {
 				@include square(4.5em);
-				display: inline-block;
+				display: block;
 		}
 }
 
