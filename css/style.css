@@ -172,6 +172,7 @@ section {
 
 .IconsList .IconsList__item {
   display: block;
+  text-align: center;
   background-color: #fff;
   position: relative;
   border: 1px solid #ccc;
@@ -199,14 +200,15 @@ section {
     margin-right: .5em; }
 
 .icon-box {
+  display: inline-block;
   margin: 0 auto;
-  padding: .25em;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  background-color: #e4e5e9; }
   .icon-box .icon {
     width: 4.5em;
     height: 4.5em;
-    display: inline-block; }
+    display: block; }
 
 h1 {
   margin-top: 0; }
