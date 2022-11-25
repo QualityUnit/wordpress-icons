@@ -69,7 +69,11 @@ gulp.task( 'scripts', () =>
 let LAConfig = {
 	shape: {
 		id: {
-			generator: '%s',
+			separator: '/',
+			generator: ( name ) => {
+				const renamed = name.replace( '/', '-' ).replace( '.svg', '' );
+				return renamed;
+			},
 		},
 	},
 	svg: {
@@ -94,7 +98,11 @@ let LAConfig = {
 const PAPConfig = {
 	shape: {
 		id: {
-			generator: '%s',
+			separator: '/',
+			generator: ( name ) => {
+				const renamed = name.replace( '/', '-' ).replace( '.svg', '' );
+				return renamed;
+			},
 		},
 	},
 	svg: {
@@ -119,21 +127,6 @@ const PAPConfig = {
 gulp.task( 'laIcons', () => 
 
 	gulp.src([ './icons/common/**/*.svg', './icons/liveagent/**/*.svg' ], { base: './' })
-		.pipe( rename( (file) => {
-			let myprefix = file.dirname;
-			myprefix = myprefix.replace(/.+?\/([^\\/]+)$/g,'$1');
-
-			if ( myprefix !== 'common' && myprefix !== 'liveagent' ) {
-				myprefix = `${myprefix}-`
-			} else {
-				myprefix = '';
-			}
-			return {
-				dirname: file.dirname,
-				basename: `${myprefix}${file.basename}`,
-				extname: '.svg'
-			};
-		}))
 		.pipe( svgSprites( LAConfig ) )
 		.pipe( gulp.dest( './docs' ) )
 		.pipe( browserSync.reload( { stream: true } ) )
@@ -142,21 +135,6 @@ gulp.task( 'laIcons', () =>
 gulp.task( 'papIcons', () =>
 	gulp
 		.src( [ './icons/common/**/*.svg', './icons/postaffiliatepro/**/*.svg' ], { base: './' } )
-		.pipe( rename( (file) => {
-			let myprefix = file.dirname;
-			myprefix = myprefix.replace(/.+?\/([^\\/]+)$/g,'$1');
-
-			if ( myprefix !== 'common' && myprefix !== 'postaffiliatepro' ) {
-				myprefix = `${myprefix}-`
-			} else {
-				myprefix = '';
-			}
-			return {
-				dirname: file.dirname,
-				basename: `${myprefix}${file.basename}`,
-				extname: '.svg'
-			};
-		}))
 		.pipe( svgSprites( PAPConfig ) )
 		.pipe( gulp.dest( './docs' ) )
 		.pipe( browserSync.reload( { stream: true } ) )
