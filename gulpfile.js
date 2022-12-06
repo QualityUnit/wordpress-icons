@@ -5,7 +5,6 @@ const gulp = require( 'gulp' );
 const browserSync = require( 'browser-sync' ).create();
 const svgSprites = require( 'gulp-svg-sprite' );
 const plumber = require( 'gulp-plumber' );
-const rename = require( 'gulp-rename' );
 const sass = require( 'gulp-sass' )( require( 'node-sass' ) );
 const terser = require( 'gulp-terser' );
 
@@ -27,7 +26,7 @@ gulp.task( 'browser-sync', () => {
 
 	gulp.watch(
 		['./icons/**/*.svg', './src/tmpl/**/*.html'],
-		gulp.series( 'laIcons', 'papIcons' )
+		gulp.series( 'laIcons', 'papIcons', 'urlslabIcons' )
 	);
 });
 
@@ -124,9 +123,38 @@ const PAPConfig = {
 	},
 };
 
+let URLslabConfig = {
+	shape: {
+		id: {
+			separator: '/',
+			generator: ( name ) => {
+				const renamed = name.replace( '/', '-' ).replace( '.svg', '' );
+				return renamed;
+			},
+		},
+	},
+	svg: {
+		xmlDeclaration: false,
+	},
+	mode: {
+		symbol: {
+			dest: '.',
+			sprite: 'reference/urlslab-icons.svg',
+			prefix: '%s',
+			dimensions: '',
+			inline: false,
+			rootviewbox: false,
+			example: {
+				template: './src/tmpl/symbol/template-urlslab.html',
+				dest: 'reference/urlslab-icons-reference.html',
+			},
+		},
+	},
+};
+
 gulp.task( 'laIcons', () => 
 
-	gulp.src([ './icons/common/**/*.svg', './icons/liveagent/**/*.svg' ], { base: './' })
+	gulp.src( [ './icons/common/**/*.svg', './icons/liveagent/**/*.svg' ] )
 		.pipe( svgSprites( LAConfig ) )
 		.pipe( gulp.dest( './docs' ) )
 		.pipe( browserSync.reload( { stream: true } ) )
@@ -134,8 +162,16 @@ gulp.task( 'laIcons', () =>
 
 gulp.task( 'papIcons', () =>
 	gulp
-		.src( [ './icons/common/**/*.svg', './icons/postaffiliatepro/**/*.svg' ], { base: './' } )
+		.src( [ './icons/common/**/*.svg', './icons/postaffiliatepro/**/*.svg' ] )
 		.pipe( svgSprites( PAPConfig ) )
+		.pipe( gulp.dest( './docs' ) )
+		.pipe( browserSync.reload( { stream: true } ) )
+);
+
+gulp.task( 'urlslabIcons', () => 
+
+	gulp.src( [ './icons/common/**/*.svg' ] )
+		.pipe( svgSprites( URLslabConfig ) )
 		.pipe( gulp.dest( './docs' ) )
 		.pipe( browserSync.reload( { stream: true } ) )
 );
@@ -149,6 +185,7 @@ gulp.task(
 		'scripts',
 		'laIcons',
 		'papIcons',
+		'urlslabIcons'
 	)
 );
 
@@ -160,6 +197,7 @@ gulp.task(
 		'scripts',
 		'laIcons',
 		'papIcons',
+		'urlslabIcons',
 		'browser-sync'
 	)
 );
