@@ -170,7 +170,7 @@ gulp.task( 'papIcons', () =>
 
 gulp.task( 'urlslabIcons', () => 
 
-	gulp.src( [ './icons/common/**/*.svg' ] )
+	gulp.src( [ './icons/common/**/*.svg', './icons/urlslab/**/*.svg' ] )
 		.pipe( svgSprites( URLslabConfig ) )
 		.pipe( gulp.dest( './docs' ) )
 		.pipe( browserSync.reload( { stream: true } ) )
