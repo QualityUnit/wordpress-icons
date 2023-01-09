@@ -24,3 +24,4 @@ https://qualityunit.github.io/wordpress-icons
 - click **Add File** button at the top and upload your svg icon
 - wait for file(s) to upload, it takes a while
 - click **Commit changes** button
+- contact @jremen (Jozef Remen) via Slack with info what has been uploaded
