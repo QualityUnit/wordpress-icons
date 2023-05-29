@@ -13,7 +13,7 @@
 	},
 	"devDependencies": {
 		"del": "^6",
-		"gulp": "^4",
+		"gulp": "^4.0.2",
 		"gulp-svg-sprite": "^2.0.1"
 	},
 	"dependencies": {

@@ -2,3 +2,4 @@ docs/reference
 node_modules
 yarn-error.log
 style.css
+.DS_Store
