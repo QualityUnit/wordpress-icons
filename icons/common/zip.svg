@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Artboard1" transform="matrix(1.88235,0,0,2.13333,-1.88235,0)">
+        <rect x="1" y="0" width="17" height="15" style="fill:none;"/>
+        <clipPath id="_clip1">
+            <rect x="1" y="0" width="17" height="15"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g transform="matrix(1,0,0,1,0.497011,1.42859)">
+                <g transform="matrix(0.809522,0,0,0.714284,0.450815,0)">
+                    <path d="M2.964,0C1.366,0 0.064,1.297 0.064,2.875L0.064,14.125C0.064,15.703 1.366,17 2.964,17C2.964,17 18.165,17 18.165,17C19.763,17 21.065,15.703 21.065,14.125C21.065,14.125 21.065,2.875 21.065,2.875C21.065,1.297 19.763,0 18.165,0L2.964,0ZM2.964,2L18.165,2C18.656,2 19.065,2.39 19.065,2.875L19.065,14.125C19.065,14.61 18.656,15 18.165,15L2.964,15C2.473,15 2.064,14.61 2.064,14.125L2.064,2.875C2.064,2.39 2.473,2 2.964,2Z"/>
+                </g>
+                <g transform="matrix(0.809522,0,0,0.714284,0.450815,0)">
+                    <path d="M15.064,5.357L6.064,5.357C5.513,5.357 5.064,5.805 5.064,6.357C5.064,6.909 5.513,7.357 6.064,7.357L15.065,7.357C15.616,7.357 16.065,6.909 16.065,6.357C16.064,5.805 15.616,5.357 15.064,5.357Z"/>
+                </g>
+                <g transform="matrix(0.809522,0,0,0.714284,0.450815,0)">
+                    <ellipse cx="6.064" cy="10.643" rx="1" ry="1.071"/>
+                </g>
+                <g transform="matrix(0.809522,0,0,0.714284,0.450815,0)">
+                    <ellipse cx="9.064" cy="10.643" rx="1" ry="1.071"/>
+                </g>
+                <g transform="matrix(0.809522,0,0,0.714284,0.450815,0)">
+                    <ellipse cx="12.065" cy="10.643" rx="1" ry="1.071"/>
+                </g>
+                <g transform="matrix(0.809522,0,0,0.714284,0.450815,0)">
+                    <ellipse cx="15.065" cy="10.643" rx="1" ry="1.071"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
