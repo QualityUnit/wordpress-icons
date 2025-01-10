@@ -1,0 +1,3808 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Flowhunt icon reference</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+    <style>
+        {
+                {
+                #shapes
+            }
+        }
+
+            {
+                {
+                #selector.dimensions
+            }
+        }
+
+            {
+                {
+                expression
+            }
+        }
+
+            {
+                {
+                ^last
+            }
+        }
+
+        ,
+        {
+            {
+            /last
+        }
+        }
+
+            {
+                {
+                /selector.dimensions
+            }
+        }
+
+            {
+            width: {
+                    {
+                    width.outer
+                }
+            }
+
+            px;
+
+            height: {
+                    {
+                    height.outer
+                }
+            }
+
+            px;
+        }
+
+            {
+                {
+                /shapes
+            }
+        }
+    </style>
+
+    <!--
+====================================================================================================
+-->
+
+</head>
+
+<body>
+
+    <!--
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+    https://github.com/svg-sprite/svg-sprite/blob/main/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+-->
+
+
+    <!--
+====================================================================================================
+-->
+
+    <header>
+        <h1>Flowhunt icon reference</h1>
+        <p>This preview shows icons from generated sprite in conjunction with external SVG.</p>
+        <br /><br />
+        <label class="instructions-show" for="showInstructions">
+            <h2>How to insert icon in the content (click for details)</h2>
+        </label>
+        <input id="showInstructions" class="hidden" type="checkbox" />
+        <div class="instructions">
+            <p>
+                You can show icon either via class or directly calling icon sprite in PHP code.
+            </p>
+            <br /><br />
+            <h3>Class method</h3>
+            <p>
+                Add class <code>icn-ICON_NAME</code> to the element where you want to show the icon. It will be placed
+                INSIDE that element as a <strong>first child</strong>, similar to <code>:before</code> in CSS.
+            </p>
+            <p>
+                <strong>Usage:</strong>
+            <pre>
+    <code>
+        &lt;div class=&quot;icn-search&quot;&gt;
+            <span>&mldr; other elements</span>
+        &lt;/div&gt;
+    </code>
+</pre>
+            </p>
+            <p>
+                <strong>Result:</strong>
+            <pre>
+    <code>
+        &lt;div class=&quot;icn-search&quot;&gt;
+            <em>&lt;svg class=&quot;icon icon-search&quot;&gt;
+                &lt;use xlink:href=&quot;PATH_TO/icons.svg#search&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+            </em>
+            <span>&mldr; other elements</span>
+        &lt;/div&gt;
+    </code>
+</pre>
+            </p>
+            <p>Or add class <code>icn-after-ICON_NAME</code> to element where you want to show the icon. It will be
+                placed INSIDE that element as a <strong>last child</strong>, similar to <code>:after</code> in CSS. </p>
+
+            <p>
+                <strong>Usage:</strong>
+            <pre>
+    <code>
+        &lt;div class=&quot;icn-after-search&quot;&gt;
+            <span>&mldr; other elements</span>
+        &lt;/div&gt;
+    </code>
+</pre>
+            </p>
+            <p>
+                <strong>Result:</strong>
+            <pre>
+    <code>
+        &lt;div class=&quot;icn-after-search&quot;&gt;
+            <span>&mldr; other elements</span>
+            <em>
+            &lt;svg class=&quot;icon icon-search&quot;&gt;
+                &lt;use xlink:href=&quot;PATH_TO/icons.svg#search&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+            </em>
+        &lt;/div&gt;
+    </code>
+</pre>
+            </p>
+
+            <h3>PHP Snippet to use to include icon</h3>
+            <p>
+            <pre>
+    <code>
+        &lt;svg class=&quot;icon icon-ICON_NAME&quot;&gt;
+            &lt;use xlink:href=&quot;get_template_directory_uri() . '/assets/images/icons.svg#ICON_NAME&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+    </code>
+</pre>
+            </p>
+        </div>
+    </header>
+    <section>
+
+        <!--
+A) Inline SVG with external sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+-->
+
+        <h2>SVG Icons reference</h2>
+        <div class="Filter">
+            <div class="searchField">
+                <svg class="searchField__icon">
+                    <use xlink:href="flowhunt-icons.svg#search"></use>
+                </svg>
+                <input type="search" class="search search--use-cases" placeholder="Search icon" maxlength="50">
+            </div>
+
+            <div class="FilterMenu">
+                <div class="FilterMenu__title flex flex-align-center">
+                    Select category
+                </div>
+                <div class="FilterMenu__items">
+                    <div class="FilterMenu__items--inn">
+                        <div class="checkbox FilterMenu__item" style="order: 2">
+                            <input class="filter-item" type="radio" id="cat-all" value="" name="category" checked />
+                            <label for="cat-all">
+                                Any
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="iconSize">
+                <input type="range" class="iconSize-range" data-target="icon" min="16" max="144" step="1" value="72" />
+                <strong class="iconSize-size" data-id="iconSize">72px</strong>
+            </div>
+            <div class="iconColor">
+                <input type="color" class="iconColor-range" data-target="icon" value="#000000" />
+            </div>
+        </div>
+
+
+        <ul class="IconsList">
+
+             <li title="affiliate" class="IconsList__item" data-name="affiliate">
+                <div class="Tooltip">
+                    .icn-affiliate<br />
+                    <strong>after:
+                    </strong>.icn-after-affiliate
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-affiliate&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#affiliate&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-affiliate"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#affiliate"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-affiliate"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#affiliate"></use>
+                    </svg>
+                    affiliate
+                </h4>
+            </li>
+             <li title="anchor" class="IconsList__item" data-name="anchor">
+                <div class="Tooltip">
+                    .icn-anchor<br />
+                    <strong>after:
+                    </strong>.icn-after-anchor
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-anchor&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#anchor&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-anchor"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#anchor"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-anchor"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#anchor"></use>
+                    </svg>
+                    anchor
+                </h4>
+            </li>
+             <li title="arrow-left" class="IconsList__item" data-name="arrow-left">
+                <div class="Tooltip">
+                    .icn-arrow-left<br />
+                    <strong>after:
+                    </strong>.icn-after-arrow-left
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-arrow-left&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#arrow-left&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-arrow-left"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#arrow-left"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-arrow-left"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#arrow-left"></use>
+                    </svg>
+                    arrow-left
+                </h4>
+            </li>
+             <li title="arrow-out" class="IconsList__item" data-name="arrow-out">
+                <div class="Tooltip">
+                    .icn-arrow-out<br />
+                    <strong>after:
+                    </strong>.icn-after-arrow-out
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-arrow-out&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#arrow-out&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-arrow-out"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#arrow-out"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-arrow-out"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#arrow-out"></use>
+                    </svg>
+                    arrow-out
+                </h4>
+            </li>
+             <li title="arrow-right" class="IconsList__item" data-name="arrow-right">
+                <div class="Tooltip">
+                    .icn-arrow-right<br />
+                    <strong>after:
+                    </strong>.icn-after-arrow-right
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-arrow-right&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#arrow-right&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-arrow-right"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#arrow-right"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-arrow-right"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#arrow-right"></use>
+                    </svg>
+                    arrow-right
+                </h4>
+            </li>
+             <li title="award" class="IconsList__item" data-name="award">
+                <div class="Tooltip">
+                    .icn-award<br />
+                    <strong>after:
+                    </strong>.icn-after-award
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-award&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#award&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-award"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#award"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-award"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#award"></use>
+                    </svg>
+                    award
+                </h4>
+            </li>
+             <li title="ball" class="IconsList__item" data-name="ball">
+                <div class="Tooltip">
+                    .icn-ball<br />
+                    <strong>after:
+                    </strong>.icn-after-ball
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-ball&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#ball&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-ball"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#ball"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-ball"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#ball"></use>
+                    </svg>
+                    ball
+                </h4>
+            </li>
+             <li title="bookmark" class="IconsList__item" data-name="bookmark">
+                <div class="Tooltip">
+                    .icn-bookmark<br />
+                    <strong>after:
+                    </strong>.icn-after-bookmark
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-bookmark&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#bookmark&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-bookmark"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#bookmark"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-bookmark"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#bookmark"></use>
+                    </svg>
+                    bookmark
+                </h4>
+            </li>
+             <li title="brand-github" class="IconsList__item" data-name="brand-github">
+                <div class="Tooltip">
+                    .icn-brand-github<br />
+                    <strong>after:
+                    </strong>.icn-after-brand-github
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-brand-github&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#brand-github&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-brand-github"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#brand-github"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-brand-github"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#brand-github"></use>
+                    </svg>
+                    brand-github
+                </h4>
+            </li>
+             <li title="brand-wordpress" class="IconsList__item" data-name="brand-wordpress">
+                <div class="Tooltip">
+                    .icn-brand-wordpress<br />
+                    <strong>after:
+                    </strong>.icn-after-brand-wordpress
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-brand-wordpress&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#brand-wordpress&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-brand-wordpress"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#brand-wordpress"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-brand-wordpress"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#brand-wordpress"></use>
+                    </svg>
+                    brand-wordpress
+                </h4>
+            </li>
+             <li title="briefcase" class="IconsList__item" data-name="briefcase">
+                <div class="Tooltip">
+                    .icn-briefcase<br />
+                    <strong>after:
+                    </strong>.icn-after-briefcase
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-briefcase&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#briefcase&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-briefcase"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#briefcase"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-briefcase"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#briefcase"></use>
+                    </svg>
+                    briefcase
+                </h4>
+            </li>
+             <li title="buildings" class="IconsList__item" data-name="buildings">
+                <div class="Tooltip">
+                    .icn-buildings<br />
+                    <strong>after:
+                    </strong>.icn-after-buildings
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-buildings&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#buildings&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-buildings"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#buildings"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-buildings"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#buildings"></use>
+                    </svg>
+                    buildings
+                </h4>
+            </li>
+             <li title="bullseye" class="IconsList__item" data-name="bullseye">
+                <div class="Tooltip">
+                    .icn-bullseye<br />
+                    <strong>after:
+                    </strong>.icn-after-bullseye
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-bullseye&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#bullseye&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-bullseye"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#bullseye"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-bullseye"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#bullseye"></use>
+                    </svg>
+                    bullseye
+                </h4>
+            </li>
+             <li title="calendar" class="IconsList__item" data-name="calendar">
+                <div class="Tooltip">
+                    .icn-calendar<br />
+                    <strong>after:
+                    </strong>.icn-after-calendar
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-calendar&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#calendar&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-calendar"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#calendar"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-calendar"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#calendar"></use>
+                    </svg>
+                    calendar
+                </h4>
+            </li>
+             <li title="calendar-date" class="IconsList__item" data-name="calendar-date">
+                <div class="Tooltip">
+                    .icn-calendar-date<br />
+                    <strong>after:
+                    </strong>.icn-after-calendar-date
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-calendar-date&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#calendar-date&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-calendar-date"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#calendar-date"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-calendar-date"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#calendar-date"></use>
+                    </svg>
+                    calendar-date
+                </h4>
+            </li>
+             <li title="calendar-lines" class="IconsList__item" data-name="calendar-lines">
+                <div class="Tooltip">
+                    .icn-calendar-lines<br />
+                    <strong>after:
+                    </strong>.icn-after-calendar-lines
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-calendar-lines&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#calendar-lines&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-calendar-lines"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#calendar-lines"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-calendar-lines"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#calendar-lines"></use>
+                    </svg>
+                    calendar-lines
+                </h4>
+            </li>
+             <li title="change-log" class="IconsList__item" data-name="change-log">
+                <div class="Tooltip">
+                    .icn-change-log<br />
+                    <strong>after:
+                    </strong>.icn-after-change-log
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-change-log&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#change-log&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-change-log"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#change-log"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-change-log"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#change-log"></use>
+                    </svg>
+                    change-log
+                </h4>
+            </li>
+             <li title="chart-bar" class="IconsList__item" data-name="chart-bar">
+                <div class="Tooltip">
+                    .icn-chart-bar<br />
+                    <strong>after:
+                    </strong>.icn-after-chart-bar
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-chart-bar&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#chart-bar&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-chart-bar"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#chart-bar"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-chart-bar"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#chart-bar"></use>
+                    </svg>
+                    chart-bar
+                </h4>
+            </li>
+             <li title="chart-bar-alt" class="IconsList__item" data-name="chart-bar-alt">
+                <div class="Tooltip">
+                    .icn-chart-bar-alt<br />
+                    <strong>after:
+                    </strong>.icn-after-chart-bar-alt
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-chart-bar-alt&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#chart-bar-alt&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-chart-bar-alt"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#chart-bar-alt"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-chart-bar-alt"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#chart-bar-alt"></use>
+                    </svg>
+                    chart-bar-alt
+                </h4>
+            </li>
+             <li title="chart-points" class="IconsList__item" data-name="chart-points">
+                <div class="Tooltip">
+                    .icn-chart-points<br />
+                    <strong>after:
+                    </strong>.icn-after-chart-points
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-chart-points&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#chart-points&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-chart-points"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#chart-points"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-chart-points"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#chart-points"></use>
+                    </svg>
+                    chart-points
+                </h4>
+            </li>
+             <li title="chat" class="IconsList__item" data-name="chat">
+                <div class="Tooltip">
+                    .icn-chat<br />
+                    <strong>after:
+                    </strong>.icn-after-chat
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-chat&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#chat&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-chat"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#chat"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-chat"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#chat"></use>
+                    </svg>
+                    chat
+                </h4>
+            </li>
+             <li title="check" class="IconsList__item" data-name="check">
+                <div class="Tooltip">
+                    .icn-check<br />
+                    <strong>after:
+                    </strong>.icn-after-check
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-check&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#check&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-check"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#check"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-check"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#check"></use>
+                    </svg>
+                    check
+                </h4>
+            </li>
+             <li title="check-circle-regular" class="IconsList__item" data-name="check-circle-regular">
+                <div class="Tooltip">
+                    .icn-check-circle-regular<br />
+                    <strong>after:
+                    </strong>.icn-after-check-circle-regular
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-check-circle-regular&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#check-circle-regular&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-check-circle-regular"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#check-circle-regular"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-check-circle-regular"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#check-circle-regular"></use>
+                    </svg>
+                    check-circle-regular
+                </h4>
+            </li>
+             <li title="check-narrow" class="IconsList__item" data-name="check-narrow">
+                <div class="Tooltip">
+                    .icn-check-narrow<br />
+                    <strong>after:
+                    </strong>.icn-after-check-narrow
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-check-narrow&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#check-narrow&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-check-narrow"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#check-narrow"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-check-narrow"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#check-narrow"></use>
+                    </svg>
+                    check-narrow
+                </h4>
+            </li>
+             <li title="chevron-down" class="IconsList__item" data-name="chevron-down">
+                <div class="Tooltip">
+                    .icn-chevron-down<br />
+                    <strong>after:
+                    </strong>.icn-after-chevron-down
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-chevron-down&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#chevron-down&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-chevron-down"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#chevron-down"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-chevron-down"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#chevron-down"></use>
+                    </svg>
+                    chevron-down
+                </h4>
+            </li>
+             <li title="chevron-left" class="IconsList__item" data-name="chevron-left">
+                <div class="Tooltip">
+                    .icn-chevron-left<br />
+                    <strong>after:
+                    </strong>.icn-after-chevron-left
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-chevron-left&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#chevron-left&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-chevron-left"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#chevron-left"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-chevron-left"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#chevron-left"></use>
+                    </svg>
+                    chevron-left
+                </h4>
+            </li>
+             <li title="chevron-right" class="IconsList__item" data-name="chevron-right">
+                <div class="Tooltip">
+                    .icn-chevron-right<br />
+                    <strong>after:
+                    </strong>.icn-after-chevron-right
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-chevron-right&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#chevron-right&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-chevron-right"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#chevron-right"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-chevron-right"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#chevron-right"></use>
+                    </svg>
+                    chevron-right
+                </h4>
+            </li>
+             <li title="chevron-up" class="IconsList__item" data-name="chevron-up">
+                <div class="Tooltip">
+                    .icn-chevron-up<br />
+                    <strong>after:
+                    </strong>.icn-after-chevron-up
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-chevron-up&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#chevron-up&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-chevron-up"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#chevron-up"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-chevron-up"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#chevron-up"></use>
+                    </svg>
+                    chevron-up
+                </h4>
+            </li>
+             <li title="chevrons-down" class="IconsList__item" data-name="chevrons-down">
+                <div class="Tooltip">
+                    .icn-chevrons-down<br />
+                    <strong>after:
+                    </strong>.icn-after-chevrons-down
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-chevrons-down&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#chevrons-down&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-chevrons-down"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#chevrons-down"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-chevrons-down"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#chevrons-down"></use>
+                    </svg>
+                    chevrons-down
+                </h4>
+            </li>
+             <li title="chevrons-left" class="IconsList__item" data-name="chevrons-left">
+                <div class="Tooltip">
+                    .icn-chevrons-left<br />
+                    <strong>after:
+                    </strong>.icn-after-chevrons-left
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-chevrons-left&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#chevrons-left&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-chevrons-left"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#chevrons-left"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-chevrons-left"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#chevrons-left"></use>
+                    </svg>
+                    chevrons-left
+                </h4>
+            </li>
+             <li title="chevrons-right" class="IconsList__item" data-name="chevrons-right">
+                <div class="Tooltip">
+                    .icn-chevrons-right<br />
+                    <strong>after:
+                    </strong>.icn-after-chevrons-right
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-chevrons-right&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#chevrons-right&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-chevrons-right"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#chevrons-right"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-chevrons-right"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#chevrons-right"></use>
+                    </svg>
+                    chevrons-right
+                </h4>
+            </li>
+             <li title="chevrons-up" class="IconsList__item" data-name="chevrons-up">
+                <div class="Tooltip">
+                    .icn-chevrons-up<br />
+                    <strong>after:
+                    </strong>.icn-after-chevrons-up
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-chevrons-up&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#chevrons-up&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-chevrons-up"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#chevrons-up"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-chevrons-up"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#chevrons-up"></use>
+                    </svg>
+                    chevrons-up
+                </h4>
+            </li>
+             <li title="city" class="IconsList__item" data-name="city">
+                <div class="Tooltip">
+                    .icn-city<br />
+                    <strong>after:
+                    </strong>.icn-after-city
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-city&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#city&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-city"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#city"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-city"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#city"></use>
+                    </svg>
+                    city
+                </h4>
+            </li>
+             <li title="clock" class="IconsList__item" data-name="clock">
+                <div class="Tooltip">
+                    .icn-clock<br />
+                    <strong>after:
+                    </strong>.icn-after-clock
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-clock&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#clock&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-clock"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#clock"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-clock"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#clock"></use>
+                    </svg>
+                    clock
+                </h4>
+            </li>
+             <li title="close" class="IconsList__item" data-name="close">
+                <div class="Tooltip">
+                    .icn-close<br />
+                    <strong>after:
+                    </strong>.icn-after-close
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-close&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#close&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-close"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#close"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-close"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#close"></use>
+                    </svg>
+                    close
+                </h4>
+            </li>
+             <li title="cloud" class="IconsList__item" data-name="cloud">
+                <div class="Tooltip">
+                    .icn-cloud<br />
+                    <strong>after:
+                    </strong>.icn-after-cloud
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-cloud&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#cloud&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-cloud"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#cloud"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-cloud"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#cloud"></use>
+                    </svg>
+                    cloud
+                </h4>
+            </li>
+             <li title="copy" class="IconsList__item" data-name="copy">
+                <div class="Tooltip">
+                    .icn-copy<br />
+                    <strong>after:
+                    </strong>.icn-after-copy
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-copy&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#copy&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-copy"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#copy"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-copy"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#copy"></use>
+                    </svg>
+                    copy
+                </h4>
+            </li>
+             <li title="danger" class="IconsList__item" data-name="danger">
+                <div class="Tooltip">
+                    .icn-danger<br />
+                    <strong>after:
+                    </strong>.icn-after-danger
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-danger&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#danger&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-danger"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#danger"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-danger"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#danger"></use>
+                    </svg>
+                    danger
+                </h4>
+            </li>
+             <li title="dolar" class="IconsList__item" data-name="dolar">
+                <div class="Tooltip">
+                    .icn-dolar<br />
+                    <strong>after:
+                    </strong>.icn-after-dolar
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-dolar&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#dolar&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-dolar"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#dolar"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-dolar"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#dolar"></use>
+                    </svg>
+                    dolar
+                </h4>
+            </li>
+             <li title="download" class="IconsList__item" data-name="download">
+                <div class="Tooltip">
+                    .icn-download<br />
+                    <strong>after:
+                    </strong>.icn-after-download
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-download&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#download&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-download"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#download"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-download"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#download"></use>
+                    </svg>
+                    download
+                </h4>
+            </li>
+             <li title="drawer" class="IconsList__item" data-name="drawer">
+                <div class="Tooltip">
+                    .icn-drawer<br />
+                    <strong>after:
+                    </strong>.icn-after-drawer
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-drawer&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#drawer&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-drawer"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#drawer"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-drawer"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#drawer"></use>
+                    </svg>
+                    drawer
+                </h4>
+            </li>
+             <li title="earth" class="IconsList__item" data-name="earth">
+                <div class="Tooltip">
+                    .icn-earth<br />
+                    <strong>after:
+                    </strong>.icn-after-earth
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-earth&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#earth&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-earth"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#earth"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-earth"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#earth"></use>
+                    </svg>
+                    earth
+                </h4>
+            </li>
+             <li title="emoji-smiley" class="IconsList__item" data-name="emoji-smiley">
+                <div class="Tooltip">
+                    .icn-emoji-smiley<br />
+                    <strong>after:
+                    </strong>.icn-after-emoji-smiley
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-emoji-smiley&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#emoji-smiley&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-emoji-smiley"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#emoji-smiley"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-emoji-smiley"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#emoji-smiley"></use>
+                    </svg>
+                    emoji-smiley
+                </h4>
+            </li>
+             <li title="external" class="IconsList__item" data-name="external">
+                <div class="Tooltip">
+                    .icn-external<br />
+                    <strong>after:
+                    </strong>.icn-after-external
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-external&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#external&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-external"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#external"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-external"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#external"></use>
+                    </svg>
+                    external
+                </h4>
+            </li>
+             <li title="file" class="IconsList__item" data-name="file">
+                <div class="Tooltip">
+                    .icn-file<br />
+                    <strong>after:
+                    </strong>.icn-after-file
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-file&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#file&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-file"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#file"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-file"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#file"></use>
+                    </svg>
+                    file
+                </h4>
+            </li>
+             <li title="folder" class="IconsList__item" data-name="folder">
+                <div class="Tooltip">
+                    .icn-folder<br />
+                    <strong>after:
+                    </strong>.icn-after-folder
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-folder&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#folder&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-folder"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#folder"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-folder"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#folder"></use>
+                    </svg>
+                    folder
+                </h4>
+            </li>
+             <li title="folder-solid" class="IconsList__item" data-name="folder-solid">
+                <div class="Tooltip">
+                    .icn-folder-solid<br />
+                    <strong>after:
+                    </strong>.icn-after-folder-solid
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-folder-solid&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#folder-solid&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-folder-solid"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#folder-solid"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-folder-solid"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#folder-solid"></use>
+                    </svg>
+                    folder-solid
+                </h4>
+            </li>
+             <li title="gear" class="IconsList__item" data-name="gear">
+                <div class="Tooltip">
+                    .icn-gear<br />
+                    <strong>after:
+                    </strong>.icn-after-gear
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-gear&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#gear&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-gear"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#gear"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-gear"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#gear"></use>
+                    </svg>
+                    gear
+                </h4>
+            </li>
+             <li title="globe" class="IconsList__item" data-name="globe">
+                <div class="Tooltip">
+                    .icn-globe<br />
+                    <strong>after:
+                    </strong>.icn-after-globe
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-globe&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#globe&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-globe"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#globe"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-globe"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#globe"></use>
+                    </svg>
+                    globe
+                </h4>
+            </li>
+             <li title="graduation" class="IconsList__item" data-name="graduation">
+                <div class="Tooltip">
+                    .icn-graduation<br />
+                    <strong>after:
+                    </strong>.icn-after-graduation
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-graduation&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#graduation&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-graduation"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#graduation"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-graduation"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#graduation"></use>
+                    </svg>
+                    graduation
+                </h4>
+            </li>
+             <li title="headphones" class="IconsList__item" data-name="headphones">
+                <div class="Tooltip">
+                    .icn-headphones<br />
+                    <strong>after:
+                    </strong>.icn-after-headphones
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-headphones&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#headphones&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-headphones"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#headphones"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-headphones"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#headphones"></use>
+                    </svg>
+                    headphones
+                </h4>
+            </li>
+             <li title="heart" class="IconsList__item" data-name="heart">
+                <div class="Tooltip">
+                    .icn-heart<br />
+                    <strong>after:
+                    </strong>.icn-after-heart
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-heart&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#heart&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-heart"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#heart"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-heart"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#heart"></use>
+                    </svg>
+                    heart
+                </h4>
+            </li>
+             <li title="inbox" class="IconsList__item" data-name="inbox">
+                <div class="Tooltip">
+                    .icn-inbox<br />
+                    <strong>after:
+                    </strong>.icn-after-inbox
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-inbox&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#inbox&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-inbox"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#inbox"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-inbox"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#inbox"></use>
+                    </svg>
+                    inbox
+                </h4>
+            </li>
+             <li title="info-circle" class="IconsList__item" data-name="info-circle">
+                <div class="Tooltip">
+                    .icn-info-circle<br />
+                    <strong>after:
+                    </strong>.icn-after-info-circle
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-info-circle&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#info-circle&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-info-circle"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#info-circle"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-info-circle"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#info-circle"></use>
+                    </svg>
+                    info-circle
+                </h4>
+            </li>
+             <li title="info-solid" class="IconsList__item" data-name="info-solid">
+                <div class="Tooltip">
+                    .icn-info-solid<br />
+                    <strong>after:
+                    </strong>.icn-after-info-solid
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-info-solid&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#info-solid&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-info-solid"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#info-solid"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-info-solid"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#info-solid"></use>
+                    </svg>
+                    info-solid
+                </h4>
+            </li>
+             <li title="layout" class="IconsList__item" data-name="layout">
+                <div class="Tooltip">
+                    .icn-layout<br />
+                    <strong>after:
+                    </strong>.icn-after-layout
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-layout&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#layout&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-layout"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#layout"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-layout"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#layout"></use>
+                    </svg>
+                    layout
+                </h4>
+            </li>
+             <li title="lightbulb" class="IconsList__item" data-name="lightbulb">
+                <div class="Tooltip">
+                    .icn-lightbulb<br />
+                    <strong>after:
+                    </strong>.icn-after-lightbulb
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-lightbulb&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#lightbulb&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-lightbulb"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#lightbulb"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-lightbulb"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#lightbulb"></use>
+                    </svg>
+                    lightbulb
+                </h4>
+            </li>
+             <li title="lightning" class="IconsList__item" data-name="lightning">
+                <div class="Tooltip">
+                    .icn-lightning<br />
+                    <strong>after:
+                    </strong>.icn-after-lightning
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-lightning&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#lightning&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-lightning"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#lightning"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-lightning"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#lightning"></use>
+                    </svg>
+                    lightning
+                </h4>
+            </li>
+             <li title="link" class="IconsList__item" data-name="link">
+                <div class="Tooltip">
+                    .icn-link<br />
+                    <strong>after:
+                    </strong>.icn-after-link
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-link&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#link&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-link"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#link"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-link"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#link"></use>
+                    </svg>
+                    link
+                </h4>
+            </li>
+             <li title="location-pin" class="IconsList__item" data-name="location-pin">
+                <div class="Tooltip">
+                    .icn-location-pin<br />
+                    <strong>after:
+                    </strong>.icn-after-location-pin
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-location-pin&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#location-pin&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-location-pin"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#location-pin"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-location-pin"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#location-pin"></use>
+                    </svg>
+                    location-pin
+                </h4>
+            </li>
+             <li title="mail" class="IconsList__item" data-name="mail">
+                <div class="Tooltip">
+                    .icn-mail<br />
+                    <strong>after:
+                    </strong>.icn-after-mail
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-mail&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#mail&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-mail"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#mail"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-mail"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#mail"></use>
+                    </svg>
+                    mail
+                </h4>
+            </li>
+             <li title="media" class="IconsList__item" data-name="media">
+                <div class="Tooltip">
+                    .icn-media<br />
+                    <strong>after:
+                    </strong>.icn-after-media
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-media&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#media&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-media"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#media"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-media"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#media"></use>
+                    </svg>
+                    media
+                </h4>
+            </li>
+             <li title="menu-article" class="IconsList__item" data-name="menu-article">
+                <div class="Tooltip">
+                    .icn-menu-article<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-article
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-article&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-article&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-article"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-article"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-article"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-article"></use>
+                    </svg>
+                    menu-article
+                </h4>
+            </li>
+             <li title="menu-chart-bar" class="IconsList__item" data-name="menu-chart-bar">
+                <div class="Tooltip">
+                    .icn-menu-chart-bar<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-chart-bar
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-chart-bar&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-chart-bar&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-chart-bar"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-chart-bar"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-chart-bar"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-chart-bar"></use>
+                    </svg>
+                    menu-chart-bar
+                </h4>
+            </li>
+             <li title="menu-customer-portal" class="IconsList__item" data-name="menu-customer-portal">
+                <div class="Tooltip">
+                    .icn-menu-customer-portal<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-customer-portal
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-customer-portal&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-customer-portal&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-customer-portal"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-customer-portal"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-customer-portal"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-customer-portal"></use>
+                    </svg>
+                    menu-customer-portal
+                </h4>
+            </li>
+             <li title="menu-directory" class="IconsList__item" data-name="menu-directory">
+                <div class="Tooltip">
+                    .icn-menu-directory<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-directory
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-directory&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-directory&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-directory"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-directory"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-directory"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-directory"></use>
+                    </svg>
+                    menu-directory
+                </h4>
+            </li>
+             <li title="menu-file-text-ai" class="IconsList__item" data-name="menu-file-text-ai">
+                <div class="Tooltip">
+                    .icn-menu-file-text-ai<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-file-text-ai
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-file-text-ai&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-file-text-ai&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-file-text-ai"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-file-text-ai"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-file-text-ai"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-file-text-ai"></use>
+                    </svg>
+                    menu-file-text-ai
+                </h4>
+            </li>
+             <li title="menu-flame" class="IconsList__item" data-name="menu-flame">
+                <div class="Tooltip">
+                    .icn-menu-flame<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-flame
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-flame&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-flame&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-flame"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-flame"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-flame"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-flame"></use>
+                    </svg>
+                    menu-flame
+                </h4>
+            </li>
+             <li title="menu-glossary" class="IconsList__item" data-name="menu-glossary">
+                <div class="Tooltip">
+                    .icn-menu-glossary<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-glossary
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-glossary&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-glossary&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-glossary"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-glossary"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-glossary"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-glossary"></use>
+                    </svg>
+                    menu-glossary
+                </h4>
+            </li>
+             <li title="menu-headset" class="IconsList__item" data-name="menu-headset">
+                <div class="Tooltip">
+                    .icn-menu-headset<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-headset
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-headset&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-headset&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-headset"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-headset"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-headset"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-headset"></use>
+                    </svg>
+                    menu-headset
+                </h4>
+            </li>
+             <li title="menu-help-desk" class="IconsList__item" data-name="menu-help-desk">
+                <div class="Tooltip">
+                    .icn-menu-help-desk<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-help-desk
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-help-desk&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-help-desk&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-help-desk"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-help-desk"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-help-desk"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-help-desk"></use>
+                    </svg>
+                    menu-help-desk
+                </h4>
+            </li>
+             <li title="menu-input-ai" class="IconsList__item" data-name="menu-input-ai">
+                <div class="Tooltip">
+                    .icn-menu-input-ai<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-input-ai
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-input-ai&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-input-ai&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-input-ai"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-input-ai"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-input-ai"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-input-ai"></use>
+                    </svg>
+                    menu-input-ai
+                </h4>
+            </li>
+             <li title="menu-layout-collage" class="IconsList__item" data-name="menu-layout-collage">
+                <div class="Tooltip">
+                    .icn-menu-layout-collage<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-layout-collage
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-layout-collage&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-layout-collage&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-layout-collage"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-layout-collage"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-layout-collage"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-layout-collage"></use>
+                    </svg>
+                    menu-layout-collage
+                </h4>
+            </li>
+             <li title="menu-message-chatbot" class="IconsList__item" data-name="menu-message-chatbot">
+                <div class="Tooltip">
+                    .icn-menu-message-chatbot<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-message-chatbot
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-message-chatbot&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-message-chatbot&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-message-chatbot"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-message-chatbot"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-message-chatbot"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-message-chatbot"></use>
+                    </svg>
+                    menu-message-chatbot
+                </h4>
+            </li>
+             <li title="menu-palette" class="IconsList__item" data-name="menu-palette">
+                <div class="Tooltip">
+                    .icn-menu-palette<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-palette
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-palette&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-palette&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-palette"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-palette"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-palette"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-palette"></use>
+                    </svg>
+                    menu-palette
+                </h4>
+            </li>
+             <li title="menu-retrievers" class="IconsList__item" data-name="menu-retrievers">
+                <div class="Tooltip">
+                    .icn-menu-retrievers<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-retrievers
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-retrievers&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-retrievers&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-retrievers"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-retrievers"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-retrievers"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-retrievers"></use>
+                    </svg>
+                    menu-retrievers
+                </h4>
+            </li>
+             <li title="menu-robot" class="IconsList__item" data-name="menu-robot">
+                <div class="Tooltip">
+                    .icn-menu-robot<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-robot
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-robot&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-robot&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-robot"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-robot"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-robot"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-robot"></use>
+                    </svg>
+                    menu-robot
+                </h4>
+            </li>
+             <li title="menu-school" class="IconsList__item" data-name="menu-school">
+                <div class="Tooltip">
+                    .icn-menu-school<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-school
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-school&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-school&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-school"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-school"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-school"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-school"></use>
+                    </svg>
+                    menu-school
+                </h4>
+            </li>
+             <li title="menu-seo" class="IconsList__item" data-name="menu-seo">
+                <div class="Tooltip">
+                    .icn-menu-seo<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-seo
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-seo&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-seo&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-seo"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-seo"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-seo"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-seo"></use>
+                    </svg>
+                    menu-seo
+                </h4>
+            </li>
+             <li title="menu-sort" class="IconsList__item" data-name="menu-sort">
+                <div class="Tooltip">
+                    .icn-menu-sort<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-sort
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-sort&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-sort&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-sort"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-sort"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-sort"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-sort"></use>
+                    </svg>
+                    menu-sort
+                </h4>
+            </li>
+             <li title="menu-templates" class="IconsList__item" data-name="menu-templates">
+                <div class="Tooltip">
+                    .icn-menu-templates<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-templates
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-templates&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-templates&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-templates"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-templates"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-templates"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-templates"></use>
+                    </svg>
+                    menu-templates
+                </h4>
+            </li>
+             <li title="menu-typing-test" class="IconsList__item" data-name="menu-typing-test">
+                <div class="Tooltip">
+                    .icn-menu-typing-test<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-typing-test
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-typing-test&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-typing-test&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-typing-test"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-typing-test"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-typing-test"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-typing-test"></use>
+                    </svg>
+                    menu-typing-test
+                </h4>
+            </li>
+             <li title="menu-use-cases" class="IconsList__item" data-name="menu-use-cases">
+                <div class="Tooltip">
+                    .icn-menu-use-cases<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-use-cases
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-use-cases&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-use-cases&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-use-cases"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-use-cases"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-use-cases"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-use-cases"></use>
+                    </svg>
+                    menu-use-cases
+                </h4>
+            </li>
+             <li title="menu-videos" class="IconsList__item" data-name="menu-videos">
+                <div class="Tooltip">
+                    .icn-menu-videos<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-videos
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-videos&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-videos&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-videos"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-videos"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-videos"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-videos"></use>
+                    </svg>
+                    menu-videos
+                </h4>
+            </li>
+             <li title="menu-webinars" class="IconsList__item" data-name="menu-webinars">
+                <div class="Tooltip">
+                    .icn-menu-webinars<br />
+                    <strong>after:
+                    </strong>.icn-after-menu-webinars
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menu-webinars&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menu-webinars&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menu-webinars"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menu-webinars"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menu-webinars"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menu-webinars"></use>
+                    </svg>
+                    menu-webinars
+                </h4>
+            </li>
+             <li title="menubars" class="IconsList__item" data-name="menubars">
+                <div class="Tooltip">
+                    .icn-menubars<br />
+                    <strong>after:
+                    </strong>.icn-after-menubars
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-menubars&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#menubars&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-menubars"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#menubars"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-menubars"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#menubars"></use>
+                    </svg>
+                    menubars
+                </h4>
+            </li>
+             <li title="microscope" class="IconsList__item" data-name="microscope">
+                <div class="Tooltip">
+                    .icn-microscope<br />
+                    <strong>after:
+                    </strong>.icn-after-microscope
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-microscope&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#microscope&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-microscope"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#microscope"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-microscope"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#microscope"></use>
+                    </svg>
+                    microscope
+                </h4>
+            </li>
+             <li title="network" class="IconsList__item" data-name="network">
+                <div class="Tooltip">
+                    .icn-network<br />
+                    <strong>after:
+                    </strong>.icn-after-network
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-network&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#network&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-network"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#network"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-network"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#network"></use>
+                    </svg>
+                    network
+                </h4>
+            </li>
+             <li title="paypal" class="IconsList__item" data-name="paypal">
+                <div class="Tooltip">
+                    .icn-paypal<br />
+                    <strong>after:
+                    </strong>.icn-after-paypal
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-paypal&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#paypal&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-paypal"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#paypal"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-paypal"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#paypal"></use>
+                    </svg>
+                    paypal
+                </h4>
+            </li>
+             <li title="pencil" class="IconsList__item" data-name="pencil">
+                <div class="Tooltip">
+                    .icn-pencil<br />
+                    <strong>after:
+                    </strong>.icn-after-pencil
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-pencil&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#pencil&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-pencil"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#pencil"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-pencil"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#pencil"></use>
+                    </svg>
+                    pencil
+                </h4>
+            </li>
+             <li title="pencil-with-stars" class="IconsList__item" data-name="pencil-with-stars">
+                <div class="Tooltip">
+                    .icn-pencil-with-stars<br />
+                    <strong>after:
+                    </strong>.icn-after-pencil-with-stars
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-pencil-with-stars&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#pencil-with-stars&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-pencil-with-stars"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#pencil-with-stars"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-pencil-with-stars"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#pencil-with-stars"></use>
+                    </svg>
+                    pencil-with-stars
+                </h4>
+            </li>
+             <li title="percent" class="IconsList__item" data-name="percent">
+                <div class="Tooltip">
+                    .icn-percent<br />
+                    <strong>after:
+                    </strong>.icn-after-percent
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-percent&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#percent&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-percent"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#percent"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-percent"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#percent"></use>
+                    </svg>
+                    percent
+                </h4>
+            </li>
+             <li title="phone" class="IconsList__item" data-name="phone">
+                <div class="Tooltip">
+                    .icn-phone<br />
+                    <strong>after:
+                    </strong>.icn-after-phone
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-phone&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#phone&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-phone"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#phone"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-phone"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#phone"></use>
+                    </svg>
+                    phone
+                </h4>
+            </li>
+             <li title="phone-solid" class="IconsList__item" data-name="phone-solid">
+                <div class="Tooltip">
+                    .icn-phone-solid<br />
+                    <strong>after:
+                    </strong>.icn-after-phone-solid
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-phone-solid&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#phone-solid&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-phone-solid"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#phone-solid"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-phone-solid"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#phone-solid"></use>
+                    </svg>
+                    phone-solid
+                </h4>
+            </li>
+             <li title="photo" class="IconsList__item" data-name="photo">
+                <div class="Tooltip">
+                    .icn-photo<br />
+                    <strong>after:
+                    </strong>.icn-after-photo
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-photo&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#photo&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-photo"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#photo"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-photo"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#photo"></use>
+                    </svg>
+                    photo
+                </h4>
+            </li>
+             <li title="play" class="IconsList__item" data-name="play">
+                <div class="Tooltip">
+                    .icn-play<br />
+                    <strong>after:
+                    </strong>.icn-after-play
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-play&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#play&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-play"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#play"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-play"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#play"></use>
+                    </svg>
+                    play
+                </h4>
+            </li>
+             <li title="play-circle" class="IconsList__item" data-name="play-circle">
+                <div class="Tooltip">
+                    .icn-play-circle<br />
+                    <strong>after:
+                    </strong>.icn-after-play-circle
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-play-circle&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#play-circle&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-play-circle"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#play-circle"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-play-circle"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#play-circle"></use>
+                    </svg>
+                    play-circle
+                </h4>
+            </li>
+             <li title="presentation" class="IconsList__item" data-name="presentation">
+                <div class="Tooltip">
+                    .icn-presentation<br />
+                    <strong>after:
+                    </strong>.icn-after-presentation
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-presentation&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#presentation&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-presentation"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#presentation"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-presentation"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#presentation"></use>
+                    </svg>
+                    presentation
+                </h4>
+            </li>
+             <li title="refresh" class="IconsList__item" data-name="refresh">
+                <div class="Tooltip">
+                    .icn-refresh<br />
+                    <strong>after:
+                    </strong>.icn-after-refresh
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-refresh&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#refresh&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-refresh"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#refresh"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-refresh"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#refresh"></use>
+                    </svg>
+                    refresh
+                </h4>
+            </li>
+             <li title="search" class="IconsList__item" data-name="search">
+                <div class="Tooltip">
+                    .icn-search<br />
+                    <strong>after:
+                    </strong>.icn-after-search
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-search&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#search&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-search"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#search"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-search"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#search"></use>
+                    </svg>
+                    search
+                </h4>
+            </li>
+             <li title="share" class="IconsList__item" data-name="share">
+                <div class="Tooltip">
+                    .icn-share<br />
+                    <strong>after:
+                    </strong>.icn-after-share
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-share&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#share&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-share"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#share"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-share"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#share"></use>
+                    </svg>
+                    share
+                </h4>
+            </li>
+             <li title="shop" class="IconsList__item" data-name="shop">
+                <div class="Tooltip">
+                    .icn-shop<br />
+                    <strong>after:
+                    </strong>.icn-after-shop
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-shop&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#shop&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-shop"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#shop"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-shop"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#shop"></use>
+                    </svg>
+                    shop
+                </h4>
+            </li>
+             <li title="sliders" class="IconsList__item" data-name="sliders">
+                <div class="Tooltip">
+                    .icn-sliders<br />
+                    <strong>after:
+                    </strong>.icn-after-sliders
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-sliders&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#sliders&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-sliders"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#sliders"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-sliders"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#sliders"></use>
+                    </svg>
+                    sliders
+                </h4>
+            </li>
+             <li title="social-discord" class="IconsList__item" data-name="social-discord">
+                <div class="Tooltip">
+                    .icn-social-discord<br />
+                    <strong>after:
+                    </strong>.icn-after-social-discord
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-social-discord&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#social-discord&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-social-discord"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#social-discord"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-social-discord"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#social-discord"></use>
+                    </svg>
+                    social-discord
+                </h4>
+            </li>
+             <li title="social-facebook" class="IconsList__item" data-name="social-facebook">
+                <div class="Tooltip">
+                    .icn-social-facebook<br />
+                    <strong>after:
+                    </strong>.icn-after-social-facebook
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-social-facebook&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#social-facebook&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-social-facebook"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#social-facebook"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-social-facebook"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#social-facebook"></use>
+                    </svg>
+                    social-facebook
+                </h4>
+            </li>
+             <li title="social-instagram" class="IconsList__item" data-name="social-instagram">
+                <div class="Tooltip">
+                    .icn-social-instagram<br />
+                    <strong>after:
+                    </strong>.icn-after-social-instagram
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-social-instagram&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#social-instagram&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-social-instagram"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#social-instagram"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-social-instagram"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#social-instagram"></use>
+                    </svg>
+                    social-instagram
+                </h4>
+            </li>
+             <li title="social-linkedin" class="IconsList__item" data-name="social-linkedin">
+                <div class="Tooltip">
+                    .icn-social-linkedin<br />
+                    <strong>after:
+                    </strong>.icn-after-social-linkedin
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-social-linkedin&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#social-linkedin&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-social-linkedin"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#social-linkedin"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-social-linkedin"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#social-linkedin"></use>
+                    </svg>
+                    social-linkedin
+                </h4>
+            </li>
+             <li title="social-twitter" class="IconsList__item" data-name="social-twitter">
+                <div class="Tooltip">
+                    .icn-social-twitter<br />
+                    <strong>after:
+                    </strong>.icn-after-social-twitter
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-social-twitter&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#social-twitter&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-social-twitter"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#social-twitter"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-social-twitter"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#social-twitter"></use>
+                    </svg>
+                    social-twitter
+                </h4>
+            </li>
+             <li title="social-whatsapp" class="IconsList__item" data-name="social-whatsapp">
+                <div class="Tooltip">
+                    .icn-social-whatsapp<br />
+                    <strong>after:
+                    </strong>.icn-after-social-whatsapp
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-social-whatsapp&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#social-whatsapp&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-social-whatsapp"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#social-whatsapp"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-social-whatsapp"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#social-whatsapp"></use>
+                    </svg>
+                    social-whatsapp
+                </h4>
+            </li>
+             <li title="social-x" class="IconsList__item" data-name="social-x">
+                <div class="Tooltip">
+                    .icn-social-x<br />
+                    <strong>after:
+                    </strong>.icn-after-social-x
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-social-x&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#social-x&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-social-x"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#social-x"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-social-x"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#social-x"></use>
+                    </svg>
+                    social-x
+                </h4>
+            </li>
+             <li title="social-youtube" class="IconsList__item" data-name="social-youtube">
+                <div class="Tooltip">
+                    .icn-social-youtube<br />
+                    <strong>after:
+                    </strong>.icn-after-social-youtube
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-social-youtube&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#social-youtube&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-social-youtube"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#social-youtube"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-social-youtube"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#social-youtube"></use>
+                    </svg>
+                    social-youtube
+                </h4>
+            </li>
+             <li title="speedmeter" class="IconsList__item" data-name="speedmeter">
+                <div class="Tooltip">
+                    .icn-speedmeter<br />
+                    <strong>after:
+                    </strong>.icn-after-speedmeter
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-speedmeter&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#speedmeter&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-speedmeter"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#speedmeter"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-speedmeter"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#speedmeter"></use>
+                    </svg>
+                    speedmeter
+                </h4>
+            </li>
+             <li title="star" class="IconsList__item" data-name="star">
+                <div class="Tooltip">
+                    .icn-star<br />
+                    <strong>after:
+                    </strong>.icn-after-star
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-star&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#star&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-star"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#star"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-star"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#star"></use>
+                    </svg>
+                    star
+                </h4>
+            </li>
+             <li title="star-solid" class="IconsList__item" data-name="star-solid">
+                <div class="Tooltip">
+                    .icn-star-solid<br />
+                    <strong>after:
+                    </strong>.icn-after-star-solid
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-star-solid&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#star-solid&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-star-solid"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#star-solid"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-star-solid"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#star-solid"></use>
+                    </svg>
+                    star-solid
+                </h4>
+            </li>
+             <li title="state" class="IconsList__item" data-name="state">
+                <div class="Tooltip">
+                    .icn-state<br />
+                    <strong>after:
+                    </strong>.icn-after-state
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-state&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#state&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-state"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#state"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-state"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#state"></use>
+                    </svg>
+                    state
+                </h4>
+            </li>
+             <li title="tab-graph" class="IconsList__item" data-name="tab-graph">
+                <div class="Tooltip">
+                    .icn-tab-graph<br />
+                    <strong>after:
+                    </strong>.icn-after-tab-graph
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-tab-graph&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#tab-graph&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-tab-graph"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#tab-graph"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-tab-graph"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#tab-graph"></use>
+                    </svg>
+                    tab-graph
+                </h4>
+            </li>
+             <li title="tab-heart" class="IconsList__item" data-name="tab-heart">
+                <div class="Tooltip">
+                    .icn-tab-heart<br />
+                    <strong>after:
+                    </strong>.icn-after-tab-heart
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-tab-heart&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#tab-heart&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-tab-heart"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#tab-heart"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-tab-heart"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#tab-heart"></use>
+                    </svg>
+                    tab-heart
+                </h4>
+            </li>
+             <li title="tab-heart2" class="IconsList__item" data-name="tab-heart2">
+                <div class="Tooltip">
+                    .icn-tab-heart2<br />
+                    <strong>after:
+                    </strong>.icn-after-tab-heart2
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-tab-heart2&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#tab-heart2&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-tab-heart2"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#tab-heart2"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-tab-heart2"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#tab-heart2"></use>
+                    </svg>
+                    tab-heart2
+                </h4>
+            </li>
+             <li title="tab-person" class="IconsList__item" data-name="tab-person">
+                <div class="Tooltip">
+                    .icn-tab-person<br />
+                    <strong>after:
+                    </strong>.icn-after-tab-person
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-tab-person&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#tab-person&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-tab-person"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#tab-person"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-tab-person"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#tab-person"></use>
+                    </svg>
+                    tab-person
+                </h4>
+            </li>
+             <li title="tab-pricetag" class="IconsList__item" data-name="tab-pricetag">
+                <div class="Tooltip">
+                    .icn-tab-pricetag<br />
+                    <strong>after:
+                    </strong>.icn-after-tab-pricetag
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-tab-pricetag&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#tab-pricetag&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-tab-pricetag"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#tab-pricetag"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-tab-pricetag"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#tab-pricetag"></use>
+                    </svg>
+                    tab-pricetag
+                </h4>
+            </li>
+             <li title="tab-rocket" class="IconsList__item" data-name="tab-rocket">
+                <div class="Tooltip">
+                    .icn-tab-rocket<br />
+                    <strong>after:
+                    </strong>.icn-after-tab-rocket
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-tab-rocket&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#tab-rocket&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-tab-rocket"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#tab-rocket"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-tab-rocket"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#tab-rocket"></use>
+                    </svg>
+                    tab-rocket
+                </h4>
+            </li>
+             <li title="tab-smiley" class="IconsList__item" data-name="tab-smiley">
+                <div class="Tooltip">
+                    .icn-tab-smiley<br />
+                    <strong>after:
+                    </strong>.icn-after-tab-smiley
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-tab-smiley&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#tab-smiley&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-tab-smiley"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#tab-smiley"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-tab-smiley"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#tab-smiley"></use>
+                    </svg>
+                    tab-smiley
+                </h4>
+            </li>
+             <li title="tab-star" class="IconsList__item" data-name="tab-star">
+                <div class="Tooltip">
+                    .icn-tab-star<br />
+                    <strong>after:
+                    </strong>.icn-after-tab-star
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-tab-star&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#tab-star&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-tab-star"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#tab-star"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-tab-star"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#tab-star"></use>
+                    </svg>
+                    tab-star
+                </h4>
+            </li>
+             <li title="tab-stars" class="IconsList__item" data-name="tab-stars">
+                <div class="Tooltip">
+                    .icn-tab-stars<br />
+                    <strong>after:
+                    </strong>.icn-after-tab-stars
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-tab-stars&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#tab-stars&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-tab-stars"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#tab-stars"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-tab-stars"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#tab-stars"></use>
+                    </svg>
+                    tab-stars
+                </h4>
+            </li>
+             <li title="tab-thumbsup" class="IconsList__item" data-name="tab-thumbsup">
+                <div class="Tooltip">
+                    .icn-tab-thumbsup<br />
+                    <strong>after:
+                    </strong>.icn-after-tab-thumbsup
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-tab-thumbsup&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#tab-thumbsup&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-tab-thumbsup"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#tab-thumbsup"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-tab-thumbsup"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#tab-thumbsup"></use>
+                    </svg>
+                    tab-thumbsup
+                </h4>
+            </li>
+             <li title="tag-solid" class="IconsList__item" data-name="tag-solid">
+                <div class="Tooltip">
+                    .icn-tag-solid<br />
+                    <strong>after:
+                    </strong>.icn-after-tag-solid
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-tag-solid&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#tag-solid&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-tag-solid"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#tag-solid"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-tag-solid"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#tag-solid"></use>
+                    </svg>
+                    tag-solid
+                </h4>
+            </li>
+             <li title="thumbsup" class="IconsList__item" data-name="thumbsup">
+                <div class="Tooltip">
+                    .icn-thumbsup<br />
+                    <strong>after:
+                    </strong>.icn-after-thumbsup
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-thumbsup&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#thumbsup&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-thumbsup"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#thumbsup"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-thumbsup"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#thumbsup"></use>
+                    </svg>
+                    thumbsup
+                </h4>
+            </li>
+             <li title="times" class="IconsList__item" data-name="times">
+                <div class="Tooltip">
+                    .icn-times<br />
+                    <strong>after:
+                    </strong>.icn-after-times
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-times&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#times&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-times"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#times"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-times"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#times"></use>
+                    </svg>
+                    times
+                </h4>
+            </li>
+             <li title="times-circle-regular" class="IconsList__item" data-name="times-circle-regular">
+                <div class="Tooltip">
+                    .icn-times-circle-regular<br />
+                    <strong>after:
+                    </strong>.icn-after-times-circle-regular
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-times-circle-regular&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#times-circle-regular&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-times-circle-regular"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#times-circle-regular"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-times-circle-regular"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#times-circle-regular"></use>
+                    </svg>
+                    times-circle-regular
+                </h4>
+            </li>
+             <li title="trophy" class="IconsList__item" data-name="trophy">
+                <div class="Tooltip">
+                    .icn-trophy<br />
+                    <strong>after:
+                    </strong>.icn-after-trophy
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-trophy&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#trophy&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-trophy"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#trophy"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-trophy"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#trophy"></use>
+                    </svg>
+                    trophy
+                </h4>
+            </li>
+             <li title="user" class="IconsList__item" data-name="user">
+                <div class="Tooltip">
+                    .icn-user<br />
+                    <strong>after:
+                    </strong>.icn-after-user
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-user&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#user&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-user"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#user"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-user"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#user"></use>
+                    </svg>
+                    user
+                </h4>
+            </li>
+             <li title="user-alt" class="IconsList__item" data-name="user-alt">
+                <div class="Tooltip">
+                    .icn-user-alt<br />
+                    <strong>after:
+                    </strong>.icn-after-user-alt
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-user-alt&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#user-alt&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-user-alt"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#user-alt"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-user-alt"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#user-alt"></use>
+                    </svg>
+                    user-alt
+                </h4>
+            </li>
+             <li title="users-alt" class="IconsList__item" data-name="users-alt">
+                <div class="Tooltip">
+                    .icn-users-alt<br />
+                    <strong>after:
+                    </strong>.icn-after-users-alt
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-users-alt&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#users-alt&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-users-alt"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#users-alt"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-users-alt"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#users-alt"></use>
+                    </svg>
+                    users-alt
+                </h4>
+            </li>
+             <li title="volume-low" class="IconsList__item" data-name="volume-low">
+                <div class="Tooltip">
+                    .icn-volume-low<br />
+                    <strong>after:
+                    </strong>.icn-after-volume-low
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-volume-low&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#volume-low&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-volume-low"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#volume-low"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-volume-low"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#volume-low"></use>
+                    </svg>
+                    volume-low
+                </h4>
+            </li>
+             <li title="wink" class="IconsList__item" data-name="wink">
+                <div class="Tooltip">
+                    .icn-wink<br />
+                    <strong>after:
+                    </strong>.icn-after-wink
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-wink&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#wink&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-wink"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#wink"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-wink"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#wink"></use>
+                    </svg>
+                    wink
+                </h4>
+            </li>
+             <li title="wrench" class="IconsList__item" data-name="wrench">
+                <div class="Tooltip">
+                    .icn-wrench<br />
+                    <strong>after:
+                    </strong>.icn-after-wrench
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-wrench&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#wrench&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-wrench"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#wrench"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-wrench"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#wrench"></use>
+                    </svg>
+                    wrench
+                </h4>
+            </li>
+             <li title="zip" class="IconsList__item" data-name="zip">
+                <div class="Tooltip">
+                    .icn-zip<br />
+                    <strong>after:
+                    </strong>.icn-after-zip
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-zip&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#zip&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-zip"
+                        data-id="icon">
+                        <use xlink:href="flowhunt-icons.svg#zip"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-zip"
+                        data-id="icon-small">
+                        <use xlink:href="flowhunt-icons.svg#zip"></use>
+                    </svg>
+                    zip
+                </h4>
+            </li>
+             </ul>
+
+        <!--
+====================================================================================================
+-->
+    </section>
+    <footer>
+        <p>Generated at Fri, 10 Jan 2025 12:15:43 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank"
+                rel="noopener noreferrer">svg-sprite</a>.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
