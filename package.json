@@ -1,7 +1,7 @@
 {
 	"name": "wordpress-icons",
 	"version": "1.0.0",
-	"description": "Icons for wordpress installations LiveAgent and PostAffiliatePro, output is SVG sprite",
+	"description": "Icons for wordpress installations LiveAgent, PostAffiliatePro, Flowhunt, Urlslab, output is SVG sprite",
 	"author": "Jozef Remen, QualityUnit",
 	"license": "GPL-2.0-only",
 	"scripts": {

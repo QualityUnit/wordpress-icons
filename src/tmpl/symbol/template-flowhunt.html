@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Flowhunt icon reference</title>
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!--
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as inline SVG, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+-->
+
+    <style>
+        {
+                {
+                #shapes
+            }
+        }
+
+            {
+                {
+                #selector.dimensions
+            }
+        }
+
+            {
+                {
+                expression
+            }
+        }
+
+            {
+                {
+                ^last
+            }
+        }
+
+        ,
+        {
+            {
+            /last
+        }
+        }
+
+            {
+                {
+                /selector.dimensions
+            }
+        }
+
+            {
+            width: {
+                    {
+                    width.outer
+                }
+            }
+
+            px;
+
+            height: {
+                    {
+                    height.outer
+                }
+            }
+
+            px;
+        }
+
+            {
+                {
+                /shapes
+            }
+        }
+    </style>
+
+    <!--
+====================================================================================================
+-->
+
+</head>
+
+<body>
+
+    <!--
+Inline <symbol> SVG sprite
+====================================================================================================
+This is an inlined version of the generated SVG sprite. The single images may be <use>d everywhere
+below within this document. Please see
+
+    https://github.com/svg-sprite/svg-sprite/blob/main/docs/configuration.md#defs--symbol-mode
+
+for further details on how to create this embeddable sprite variant.
+-->
+
+
+    <!--
+====================================================================================================
+-->
+
+    <header>
+        <h1>Flowhunt icon reference</h1>
+        <p>This preview shows icons from generated sprite in conjunction with external SVG.</p>
+        <br /><br />
+        <label class="instructions-show" for="showInstructions">
+            <h2>How to insert icon in the content (click for details)</h2>
+        </label>
+        <input id="showInstructions" class="hidden" type="checkbox" />
+        <div class="instructions">
+            <p>
+                You can show icon either via class or directly calling icon sprite in PHP code.
+            </p>
+            <br /><br />
+            <h3>Class method</h3>
+            <p>
+                Add class <code>icn-ICON_NAME</code> to the element where you want to show the icon. It will be placed
+                INSIDE that element as a <strong>first child</strong>, similar to <code>:before</code> in CSS.
+            </p>
+            <p>
+                <strong>Usage:</strong>
+            <pre>
+    <code>
+        &lt;div class=&quot;icn-search&quot;&gt;
+            <span>&mldr; other elements</span>
+        &lt;/div&gt;
+    </code>
+</pre>
+            </p>
+            <p>
+                <strong>Result:</strong>
+            <pre>
+    <code>
+        &lt;div class=&quot;icn-search&quot;&gt;
+            <em>&lt;svg class=&quot;icon icon-search&quot;&gt;
+                &lt;use xlink:href=&quot;PATH_TO/icons.svg#search&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+            </em>
+            <span>&mldr; other elements</span>
+        &lt;/div&gt;
+    </code>
+</pre>
+            </p>
+            <p>Or add class <code>icn-after-ICON_NAME</code> to element where you want to show the icon. It will be
+                placed INSIDE that element as a <strong>last child</strong>, similar to <code>:after</code> in CSS. </p>
+
+            <p>
+                <strong>Usage:</strong>
+            <pre>
+    <code>
+        &lt;div class=&quot;icn-after-search&quot;&gt;
+            <span>&mldr; other elements</span>
+        &lt;/div&gt;
+    </code>
+</pre>
+            </p>
+            <p>
+                <strong>Result:</strong>
+            <pre>
+    <code>
+        &lt;div class=&quot;icn-after-search&quot;&gt;
+            <span>&mldr; other elements</span>
+            <em>
+            &lt;svg class=&quot;icon icon-search&quot;&gt;
+                &lt;use xlink:href=&quot;PATH_TO/icons.svg#search&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+            </em>
+        &lt;/div&gt;
+    </code>
+</pre>
+            </p>
+
+            <h3>PHP Snippet to use to include icon</h3>
+            <p>
+            <pre>
+    <code>
+        &lt;svg class=&quot;icon icon-ICON_NAME&quot;&gt;
+            &lt;use xlink:href=&quot;get_template_directory_uri() . '/assets/images/icons.svg#ICON_NAME&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+    </code>
+</pre>
+            </p>
+        </div>
+    </header>
+    <section>
+
+        <!--
+A) Inline SVG with external sprite
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) and are extracted out of the inline sprite
+embedded above. They may be styled via CSS.
+-->
+
+        <h2>SVG Icons reference</h2>
+        <div class="Filter">
+            <div class="searchField">
+                <svg class="searchField__icon">
+                    <use xlink:href="{{{example}}}#search"></use>
+                </svg>
+                <input type="search" class="search search--use-cases" placeholder="Search icon" maxlength="50">
+            </div>
+
+            <div class="FilterMenu">
+                <div class="FilterMenu__title flex flex-align-center">
+                    Select category
+                </div>
+                <div class="FilterMenu__items">
+                    <div class="FilterMenu__items--inn">
+                        <div class="checkbox FilterMenu__item" style="order: 2">
+                            <input class="filter-item" type="radio" id="cat-all" value="" name="category" checked />
+                            <label for="cat-all">
+                                Any
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="iconSize">
+                <input type="range" class="iconSize-range" data-target="icon" min="16" max="144" step="1" value="72" />
+                <strong class="iconSize-size" data-id="iconSize">72px</strong>
+            </div>
+            <div class="iconColor">
+                <input type="color" class="iconColor-range" data-target="icon" value="#000000" />
+            </div>
+        </div>
+
+
+        <ul class="IconsList">
+
+            {{#shapes}} <li title="{{name}}" class="IconsList__item" data-name="{{name}}">
+                <div class="Tooltip">
+                    .icn-{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}<br />
+                    <strong>after:
+                    </strong>.icn-after-{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}
+                    <br /><br />
+                    <small>&lt;svg class=&quot;icon
+                        icon-{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}&quot;&gt;<br />
+                        &lt;use xlink:href=&quot;icons.svg#{{name}}&quot;&gt;&lt;/use&gt;<br />
+                        &lt;/svg&gt;
+                    </small>
+                </div>
+                <div class="icon-box">
+                    <svg class="icon icon-{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}"
+                        data-id="icon">
+                        <use xlink:href="{{{example}}}#{{name}}"></use>
+                    </svg>
+                </div>
+                <h4 class="IconsList__item--title">
+                    <svg class="icon icon-{{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}"
+                        data-id="icon-small">
+                        <use xlink:href="{{{example}}}#{{name}}"></use>
+                    </svg>
+                    {{name}}
+                </h4>
+            </li>
+            {{/shapes}} </ul>
+
+        <!--
+====================================================================================================
+-->
+    </section>
+    <footer>
+        <p>Generated at {{date}} by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank"
+                rel="noopener noreferrer">svg-sprite</a>.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

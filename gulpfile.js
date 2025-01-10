@@ -1,36 +1,36 @@
-const autoprefixer = require( 'gulp-autoprefixer' );
-const concat = require( 'gulp-concat' );
-const clean = require( 'del' );
-const gulp = require( 'gulp' );
-const browserSync = require( 'browser-sync' ).create();
-const svgSprites = require( 'gulp-svg-sprite' );
-const plumber = require( 'gulp-plumber' );
-const sass = require( 'gulp-sass' )( require( 'node-sass' ) );
-const terser = require( 'gulp-terser' );
+const autoprefixer = require('gulp-autoprefixer');
+const concat = require('gulp-concat');
+const clean = require('del');
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const svgSprites = require('gulp-svg-sprite');
+const plumber = require('gulp-plumber');
+const sass = require('gulp-sass')(require('node-sass'));
+const terser = require('gulp-terser');
 
-gulp.task( 'browser-reload', ( done ) => {
+gulp.task('browser-reload', (done) => {
 	browserSync.reload();
 	done();
-} );
+});
 
-gulp.task( 'browser-sync', () => {
+gulp.task('browser-sync', () => {
 	browserSync.init({
-			server: {
-					baseDir: "./docs"
-			},
-			open: false,
+		server: {
+			baseDir: "./docs"
+		},
+		open: false,
 	});
 
-	gulp.watch( './src/scss/**/*.scss', gulp.series( 'styles' ) );
-	gulp.watch( './src/js/**/*.js', gulp.series( 'scripts' ) );
+	gulp.watch('./src/scss/**/*.scss', gulp.series('styles'));
+	gulp.watch('./src/js/**/*.js', gulp.series('scripts'));
 
 	gulp.watch(
 		['./icons/**/*.svg', './src/tmpl/**/*.html'],
-		gulp.series( 'laIcons', 'papIcons', 'urlslabIcons' )
+		gulp.series('laIcons', 'papIcons', 'urlslabIcons')
 	);
 });
 
-gulp.task( 'clean-build', () =>
+gulp.task('clean-build', () =>
 	clean(
 		[
 			'./docs/reference/*',
@@ -39,38 +39,38 @@ gulp.task( 'clean-build', () =>
 	)
 );
 
-gulp.task( 'styles', () =>
+gulp.task('styles', () =>
 	gulp
-		.src( './src/scss/**/*.scss' )
-		.pipe( plumber() )
+		.src('./src/scss/**/*.scss')
+		.pipe(plumber())
 		.pipe(
-			sass( {
+			sass({
 				errLogToConsole: true,
 				outputStyle: 'nested',
 				precision: 10,
-			} )
+			})
 		)
-		.pipe( autoprefixer( 'last 3 version' ) )
-		.pipe( plumber.stop() )
-		.pipe( gulp.dest( './docs/css' ) )
-		.pipe( browserSync.reload( { stream: true } ) )
+		.pipe(autoprefixer('last 3 version'))
+		.pipe(plumber.stop())
+		.pipe(gulp.dest('./docs/css'))
+		.pipe(browserSync.reload({ stream: true }))
 );
 
-gulp.task( 'scripts', () =>
+gulp.task('scripts', () =>
 	gulp
-		.src( './src/js/**/*.js' )
-		.pipe( concat( 'script.js' ) )
-		.pipe( terser() )
-		.pipe( gulp.dest( './docs/js' ) )
-		.pipe( browserSync.reload( { stream: true } ) )
+		.src('./src/js/**/*.js')
+		.pipe(concat('script.js'))
+		.pipe(terser())
+		.pipe(gulp.dest('./docs/js'))
+		.pipe(browserSync.reload({ stream: true }))
 );
 
 let LAConfig = {
 	shape: {
 		id: {
 			separator: '/',
-			generator: ( name ) => {
-				const renamed = name.replace( '/', '-' ).replace( '.svg', '' );
+			generator: (name) => {
+				const renamed = name.replace('/', '-').replace('.svg', '');
 				return renamed;
 			},
 		},
@@ -98,8 +98,8 @@ const PAPConfig = {
 	shape: {
 		id: {
 			separator: '/',
-			generator: ( name ) => {
-				const renamed = name.replace( '/', '-' ).replace( '.svg', '' );
+			generator: (name) => {
+				const renamed = name.replace('/', '-').replace('.svg', '');
 				return renamed;
 			},
 		},
@@ -127,8 +127,8 @@ let URLslabConfig = {
 	shape: {
 		id: {
 			separator: '/',
-			generator: ( name ) => {
-				const renamed = name.replace( '/', '-' ).replace( '.svg', '' );
+			generator: (name) => {
+				const renamed = name.replace('/', '-').replace('.svg', '');
 				return renamed;
 			},
 		},
@@ -152,28 +152,65 @@ let URLslabConfig = {
 	},
 };
 
-gulp.task( 'laIcons', () => 
+let FlowhuntConfig = {
+	shape: {
+		id: {
+			separator: '/',
+			generator: (name) => {
+				const renamed = name.replace('/', '-').replace('.svg', '');
+				return renamed;
+			},
+		},
+	},
+	svg: {
+		xmlDeclaration: false,
+	},
+	mode: {
+		symbol: {
+			dest: '.',
+			sprite: 'reference/flowhunt-icons.svg',
+			prefix: '%s',
+			dimensions: '',
+			inline: false,
+			rootviewbox: false,
+			example: {
+				template: './src/tmpl/symbol/template-flowhunt.html',
+				dest: 'reference/flowhunt-icons-reference.html',
+			},
+		},
+	},
+};
 
-	gulp.src( [ './icons/common/**/*.svg', './icons/liveagent/**/*.svg' ] )
-		.pipe( svgSprites( LAConfig ) )
-		.pipe( gulp.dest( './docs' ) )
-		.pipe( browserSync.reload( { stream: true } ) )
+gulp.task('laIcons', () =>
+
+	gulp.src(['./icons/common/**/*.svg', './icons/liveagent/**/*.svg'])
+		.pipe(svgSprites(LAConfig))
+		.pipe(gulp.dest('./docs'))
+		.pipe(browserSync.reload({ stream: true }))
 );
 
-gulp.task( 'papIcons', () =>
+gulp.task('papIcons', () =>
 	gulp
-		.src( [ './icons/common/**/*.svg', './icons/postaffiliatepro/**/*.svg' ] )
-		.pipe( svgSprites( PAPConfig ) )
-		.pipe( gulp.dest( './docs' ) )
-		.pipe( browserSync.reload( { stream: true } ) )
+		.src(['./icons/common/**/*.svg', './icons/postaffiliatepro/**/*.svg'])
+		.pipe(svgSprites(PAPConfig))
+		.pipe(gulp.dest('./docs'))
+		.pipe(browserSync.reload({ stream: true }))
 );
 
-gulp.task( 'urlslabIcons', () => 
+gulp.task('urlslabIcons', () =>
 
-	gulp.src( [ './icons/common/**/*.svg', './icons/urlslab/**/*.svg' ] )
-		.pipe( svgSprites( URLslabConfig ) )
-		.pipe( gulp.dest( './docs' ) )
-		.pipe( browserSync.reload( { stream: true } ) )
+	gulp.src(['./icons/common/**/*.svg', './icons/urlslab/**/*.svg'])
+		.pipe(svgSprites(URLslabConfig))
+		.pipe(gulp.dest('./docs'))
+		.pipe(browserSync.reload({ stream: true }))
+);
+
+gulp.task('flowhuntIcons', () =>
+
+	gulp.src(['./icons/common/**/*.svg', './icons/flowhunt/**/*.svg'])
+		.pipe(svgSprites(FlowhuntConfig))
+		.pipe(gulp.dest('./docs'))
+		.pipe(browserSync.reload({ stream: true }))
 );
 
 
@@ -185,7 +222,8 @@ gulp.task(
 		'scripts',
 		'laIcons',
 		'papIcons',
-		'urlslabIcons'
+		'urlslabIcons',
+		'flowhuntIcons'
 	)
 );
 
@@ -198,6 +236,7 @@ gulp.task(
 		'laIcons',
 		'papIcons',
 		'urlslabIcons',
+		'flowhuntIcons',
 		'browser-sync'
 	)
 );
